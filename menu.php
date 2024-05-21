@@ -8,15 +8,14 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="navbar-body" id="navbarNavDropdown">
+                <nav>
                     <ul>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
+                        <li><a href="#">Catalogue</a></li>
+                        <li><a href="#">Magasin</a></li>
+                        <li><a href="#">stock</a></li>
                     </ul>
                     <hr class="menu-sep">
                     <a class="contact-button" href="#">Contact</a>
-                </div>
+                </nav>
             </div>
         </nav>
