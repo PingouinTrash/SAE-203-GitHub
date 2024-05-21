@@ -1,7 +1,7 @@
 <nav class="main-navbar">
             <div>
                 <a class="home-link" href="#">
-                    <img class="img-64px logo" src="" alt="" />
+                    <img class="img-64px logo" src="media/logo.png" alt="logo" />
                 </a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
