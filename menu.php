@@ -1,6 +1,6 @@
 <nav>
     <div>
-        <a  href="#">
+        <a class="home-link" href="#">
             <img class="img-64px logo" src="" alt="" />
         </a>
 
