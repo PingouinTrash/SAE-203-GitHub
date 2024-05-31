@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-31T14:15:38.040Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/109.0.0.0" etag="dniTeiX64W3com9Q2uPU" version="24.4.13" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-31T14:55:02.674Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/109.0.0.0" etag="YmVOm6TBfIbIYMwELR3j" version="24.4.13" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="1187" dy="674" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="961" dy="546" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -318,12 +318,12 @@
         </mxCell>
         <mxCell id="LgC-0CYl4SfMzwwXoW1B-71" value="n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="LgC-0CYl4SfMzwwXoW1B-70" vertex="1" connectable="0">
           <mxGeometry x="0.6512" relative="1" as="geometry">
-            <mxPoint x="-44" y="-30" as="offset" />
+            <mxPoint x="6" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="LgC-0CYl4SfMzwwXoW1B-72" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="LgC-0CYl4SfMzwwXoW1B-70" vertex="1" connectable="0">
           <mxGeometry x="-0.8363" y="-1" relative="1" as="geometry">
-            <mxPoint x="52" y="29" as="offset" />
+            <mxPoint x="2" y="-1" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="LgC-0CYl4SfMzwwXoW1B-73" value="utilisateurs" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="1" vertex="1">
@@ -588,12 +588,12 @@
         </mxCell>
         <mxCell id="tvZHirwViCsV2st2SNBB-1" value="n" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="zTuArHQAJUZHWdXfzfJO-40" connectable="0" vertex="1">
           <mxGeometry x="0.5776" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="-41" y="-25" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="tvZHirwViCsV2st2SNBB-2" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="zTuArHQAJUZHWdXfzfJO-40" connectable="0" vertex="1">
           <mxGeometry x="-0.7912" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="40" y="35" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
