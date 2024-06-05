@@ -12,5 +12,9 @@
         <script src="js/b.js"></script>
         <script src="js/c.js"></script>
     </head>
+    <header>
+    <img class="fond" src="media/marbre.png" alt="">
+    <img class="logo" src="media/logoConfiserie.png" alt="Logo La Confiserie">
 
+    </header>
     <body>
