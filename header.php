@@ -8,9 +8,9 @@
         <link href="css/styles.css" rel="stylesheet">
         <link href="css/colors.css" rel="stylesheet">
 
-        <script src="js/jquery-3.4.1.slim.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script src="js/a.js"></script>
+        <script src="js/b.js"></script>
+        <script src="js/c.js"></script>
     </head>
 
     <body>
