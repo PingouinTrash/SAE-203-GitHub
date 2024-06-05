@@ -1,3 +1,4 @@
+/* ------ Header ------ */ 
 .fond {
     width: 100%;
     rotate: 180deg;
@@ -7,17 +8,28 @@
     align-items: center;
     z-index: 2;
 }
+/*--------------------*/
 
 /* ------ Menu ------ */ 
 
 .menu   {
     background-color: #9F1010;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu a {
     text-decoration: none;
     color: white;
-    padding: 10px;
+    padding: 2rem;
+}
+.menu a:hover{
+    color: rgb(149, 148, 148);
 }
 /*--------------------*/
+
+/* ------  ------ */ 
+
+/*--------------------*/
+
