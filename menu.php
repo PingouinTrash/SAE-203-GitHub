@@ -2,9 +2,10 @@
     <div>
         <div>
             <ul>
-                <a href="#">Catalogue</a>
-                <a href="#">Magasin</a>
-                <a href="#">stock</a>
+                <a href="boutique.php">Boutiques</a>
+                <a href="produit.php">produit</a>
+                <a href="panier.php">Panier</a>
+                <a href="connexion.php">Connexion</a>
             </ul>
         </div>
     </div>
