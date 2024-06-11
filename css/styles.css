@@ -2,7 +2,7 @@
 
 header {
     width: 100%;
-    position: relative;
+    position: fixed;
     top: 0;
     padding: 0;
     z-index: 5;
@@ -30,7 +30,7 @@ header nav ul li a {
     padding: 2rem;
     margin-left: 2.5rem;
     margin-right: 2.5rem;
-    border: 0.1rem solid #9F1010;
+    border: 0.2rem solid #9F1010;
 }
 
 header nav ul li a:hover {
@@ -65,7 +65,7 @@ header nav ul li a:hover {
 /* ------ Main------ */
 
 main {
-    margin-top: 500px;
+    margin-top: 15rem;
 }
 
 /* ------ Footer------ */
@@ -142,6 +142,7 @@ h1{
     margin: 1rem;
     width: 150px;
     height: 150px;
+    border: 0.2rem solid white;
 }
 .Liste{
     background-color: #9f101050;
