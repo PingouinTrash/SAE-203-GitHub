@@ -21,8 +21,4 @@
         <script src="js/c.js"></script>
     </head>
 
-    <header>
-        <img class="logo" src="media/logoConfiserie.png" alt="Logo La Confiserie">
-        <img class="fond" src="media/Fond.png" alt="">
-    </header>
     <body>
