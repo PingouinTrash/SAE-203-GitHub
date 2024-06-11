@@ -1,12 +1,8 @@
     <footer>
       <nav class="foot">
-          <ul>
-              <li><a href="index.php">Accueil</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Mentions légales</a></li>
-          </ul>
-          <p>
-          </p>
+        <a href="index.php">Accueil</a>
+        <a href="#">Contact</a>
+        <a href="#">Mentions légales</a>
        </nav>
     </footer>
 

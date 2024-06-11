@@ -2,7 +2,6 @@
  header {
     display: flex;
     justify-content: center;
-    z-index: 1;
 }
 .fond {
     position: absolute;
@@ -31,31 +30,109 @@
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
-    padding: 5rem;
+    margin: 5rem;
 }
 .menu a:hover {
-    color: rgb(149, 148, 148);
+    text-decoration: underline;
 }
 /*--------------------*/
 
 /* ------ Footer------ */ 
-.foot {
-    background-color: gray;
+footer {
+    background-color: rgb(154, 153, 153);
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1.5rem;
 }
 .foot a {
     text-decoration: none;
-    color: white;
-    padding: 2rem;
+    color: rgb(0, 0, 0);
+    margin: 2rem;
     font-family: "Lora", serif;
 }
 .foot a:hover {
-    color: rgb(149, 148, 148);
+    text-decoration: underline;
 }
 /*--------------------*/
 
+/* ------ Index ------ */ 
 body {
     margin: 0;
 }
+.acceuil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.presentation{
+    background-color: #9f101050;
+    color: #9f1010;
+    font-family: "Lora", serif;
+    font-size: 1rem;
+    padding: 1rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 5.5rem;
+    color: #9F1010;
+    font-family: "Tangerine";
+    font-weight: 900;
+}
+.acceuil a {
+    padding: 5px;
+    color: white;
+    font-family: "Lora", serif;
+    background-color: #9F1010;
+
+}
+.acceuil img {
+    width: 70%;
+    margin-top: -12rem;
+    margin-left: 15%;
+    margin-right: 14%;
+}
+/*--------------------*/
+
+/* ---- Boutiques ---- */ 
+.Boutique{
+    background-color: #9F1010;
+    color: white;
+    display: flex;
+}
+.Boutique img {
+    margin: 1rem;
+    width: 150px;
+    height: 150px;
+}
+.Liste{
+    background-color: #9f101050;
+    color: #9f1010;
+    font-family: "Lora", serif;
+    font-size: 1rem;
+    padding: 1rem;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    font-family: "Tangerine";
+    font-weight: 900; 
+    margin: 0%;
+}
+h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: "Lora", serif;
+}
+/*--------------------*/
