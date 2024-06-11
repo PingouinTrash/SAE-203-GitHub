@@ -2,7 +2,7 @@
 
 header {
     width: 100%;
-    position: fixed;
+    position: relative;
     top: 0;
     padding: 0;
     z-index: 5;
@@ -174,10 +174,15 @@ h3 {
 .namepage {
     color: #9F1010;
     padding: 0.5rem;
+    margin-left: 20%;
+    margin-right: 20%;
+
 }
 .retour{
     color: #9F1010;
+    font-family: "Lora", serif;
+    font-size: 1.2rem;
     text-decoration: none;
-    size: 1rem;
+    margin-top: ;
 
 }
