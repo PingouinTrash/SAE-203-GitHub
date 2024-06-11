@@ -41,7 +41,7 @@ header nav ul li a:hover {
 
 .fond {
     position: absolute;
-    rotate: 180deg ;
+    rotate: 180deg;
     width: 100%;
     z-index: -1;
 }
@@ -50,7 +50,14 @@ header nav ul li a:hover {
     height: 10rem;
 }
 
-/* ------ Footer------ */ 
+/* ------ Main------ */
+
+main {
+    margin-top: 500px;
+}
+
+/* ------ Footer------ */
+
 footer {
     background-color: rgb(154, 153, 153);
     display: flex;
