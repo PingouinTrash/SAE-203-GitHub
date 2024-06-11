@@ -1,5 +1,5 @@
 <header>
-    <div class="logo">
+    <div class="logo-header">
         <img class="logo" src="media/logoConfiserie.png" alt="Logo La Confiserie">
         <img class="fond" src="media/Fond.png" alt="Fond marbre">
     </div>
