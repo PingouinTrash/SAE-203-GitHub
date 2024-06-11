@@ -164,11 +164,39 @@ h3 {
 .namepage {
     color: #9F1010;
     padding: 0.5rem;
+    margin-left: 20%;
+    margin-right: 20%;
+
 }
 .retour{
     color: #9F1010;
+    font-family: "Lora", serif;
+    font-size: 1.2rem;
     text-decoration: none;
-    size: 1rem;
+    margin-top: ;
 
+}
+.retour:hover{
+    text-decoration: underline;
+}
+
+.produit{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.item{
+    background-color: #9F1010;
+    padding: 1.5rem;
+    padding-bottom: 0px;
+    color: white;
+    margin: 1.5rem;
+}
+.item img{
+    width: 200px;
+    height: 150px;
+}
+.item h2 {
+    margin-bottom: 0px;
 }
 /*--------------------*/
