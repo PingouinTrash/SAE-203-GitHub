@@ -40,6 +40,8 @@ header nav ul li a:hover {
 
 .logo-header {
     position: relative;
+    display: flex;
+    justify-content: center;
     width: 100vw;
     height: 8rem;
 }
