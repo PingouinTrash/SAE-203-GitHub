@@ -104,6 +104,7 @@ h1{
     background-color: #9F1010;
     color: white;
     display: flex;
+    margin-bottom: 1.5rem;
 }
 .Boutique img {
     margin: 1rem;
