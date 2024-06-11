@@ -1,4 +1,3 @@
-
 <header>
     <div class="logo">
         <img class="logo" src="media/logoConfiserie.png" alt="Logo La Confiserie">
