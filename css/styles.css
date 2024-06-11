@@ -195,6 +195,8 @@ h3 {
 .item img{
     width: 200px;
     height: 150px;
+    border: 0.2rem solid white;
+
 }
 .item h2 {
     margin-bottom: 0px;
