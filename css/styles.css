@@ -210,3 +210,45 @@ h3 {
 .item h2 {
     margin-bottom: 0px;
 }
+
+/* ---- Connexion ---- */
+form {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    background-color: #9F1010;
+    padding: 3rem;
+    border-radius: 15px;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  form h1{
+    color: #ffffff;
+    text-align:center;
+  }
+  form p.choose-email{
+    text-align:center;
+  }
+  form .inputs {
+    display: flex;
+    flex-direction: column;
+  }
+  form .inputs input[type='ID'], input[type='password']{
+    padding: 15px;
+    border:none;
+    border-radius: 5px;
+    background-color:#f2f2f2;
+    outline:none;
+    margin-bottom: 15px;
+  }
+
+  form button{
+    padding: 25px;
+    border-radius: 5px;
+    border:none;
+    font-size: 1rem;
+    color: #9F1010;
+    background-color: #ffffff;
+    outline:none;
+    cursor:pointer;
+  }
