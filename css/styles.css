@@ -117,6 +117,7 @@ h1{
     background-color: #9F1010;
     color: white;
     display: flex;
+    margin-bottom: 1.5rem;
 }
 .Boutique img {
     margin: 1rem;
@@ -140,7 +141,8 @@ h2{
     font-size: 4rem;
     font-family: "Tangerine";
     font-weight: 900; 
-    margin: 0%;
+    margin-bottom: 0%;
+    margin-top: 2rem;
 }
 h3 {
     display: flex;
