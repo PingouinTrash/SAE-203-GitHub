@@ -60,11 +60,6 @@ header nav ul li a:hover {
     z-index: 6;
 }
 
-/* ------ Main------ */
-
-main {
-    margin-top: 500px;
-}
 
 /* ------ Footer------ */
 
@@ -119,6 +114,7 @@ h1{
     color: white;
     font-family: "Lora", serif;
     background-color: #9F1010;
+    margin-left: 45%;
 
 }
 .acceuil img {
@@ -183,6 +179,8 @@ h3 {
     font-family: "Lora", serif;
     font-size: 1.2rem;
     text-decoration: none;
+    margin-left: 10%;
+    margin-top: 10%;
 
 }
 .retour:hover{
