@@ -15,9 +15,15 @@ if ($resultat == true){
     header("Location: ".ROOT."admin/index_admin.php");
     exit();
 }
+elseif($resultat == true){
+    $_SESSION["utilisateur"] = $utilisateur;
+    $_SESSION["loggedin"] = true;
+    header("Location: ".ROOT."gerant/index_gerant.php");
+    exit();
+}
 else{
     $_SESSION["error"] = "Mauvais login / mot de passe";
-    header("Location: ".ROOT."login.php");
+    header("Location: ".ROOT."connexion.php");
     exit();
 }
 
