@@ -10,7 +10,7 @@ include_once("menu.php");
 </section>
 
 <section class="liste-produits">
-        
+    
     <div class="card produit">
         <img class="image" src="media/Bonbon.jpg" alt="Boutique de ...">
         <h3>Nom friandise</h3>
