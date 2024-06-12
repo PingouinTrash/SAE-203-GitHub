@@ -69,7 +69,7 @@ header nav ul li a:hover {
 /* -------- Main -------- */
 
 main {
-    margin-top: 15rem;
+    margin-top: 17.5rem;
 }
 
 /* -------- Footer -------- */
@@ -99,7 +99,7 @@ body {
     margin: 0;
 }
 
-.acceuil {
+.accueil {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,7 +110,8 @@ body {
     color: #9f1010;
     font-family: "Lora", serif;
     font-size: 1rem;
-    padding: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 1%;
@@ -127,12 +128,7 @@ h1 {
 }
 
 .accueil a {
-    padding: 5px;
-    color: #FFFFFF;
     font-family: "Lora", serif;
-    background-color: #9F1010;
-    margin-left: 45%;
-
 }
 
 .accueil img {
@@ -191,8 +187,7 @@ h3 {
     font-family: "Lora", serif;
     font-size: 1.2rem;
     text-decoration: none;
-    margin-left: 10%;
-    margin-top: 10%;
+    margin-left: 2.5rem;
 
 }
 
@@ -206,17 +201,16 @@ h3 {
     flex-wrap: wrap;
 }
 
-
-
 /* -------- Connexion -------- */
 
 form {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     background-color: #9F1010;
-    padding: 3rem;
-    border-radius: 15px;
+    padding: 2rem;
     margin-left: 25%;
     margin-right: 25%;
   }
@@ -248,12 +242,30 @@ form .inputs input[type='ID'], input[type='password']{
 /* -------- Boutons -------- */
 
 .bouton {
-    color: #FFFFFF;
-    background-color: #9F1010;
-    padding: 15px 25px;
+    padding: 1rem;
     font-size: 1rem;
     cursor: pointer;
+    text-align: center;
     text-decoration: none;
+    color: #FFFFFF;
+    background-color: #9F1010;
+    border: 0.2rem solid #9F1010;
+}
+
+#bouton-boutique {
+    padding: 0.1rem;
+    margin: 1rem;
+    margin-left: 25rem;
+    margin-right: 25rem;
+}
+
+#bouton-connexion {
+    align-self: center;
+}
+
+.bouton:hover {
+    color: #9F1010;
+    background-color: #FFFFFF;
 }
 
 .bouton .fond-clair {
@@ -264,13 +276,12 @@ form .inputs input[type='ID'], input[type='password']{
     border: 0.2rem solid #FFFFFF;
 }
 
-.bouton:hover {
-    color: #9F1010;
-    background-color: #FFFFFF;
-}
-
 button.bouton {
     border: 0.2rem solid #FFFFFF;
+}
+
+.bouton:hover {
+    border: 0.2rem solid #9F1010;
 }
 
 /* -------- Liens -------- */

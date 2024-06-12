@@ -3,7 +3,7 @@ include_once("header.php");
 include_once("menu.php");
 ?>
 
-    <section class="acceuil">
+    <section class="accueil">
         <h1>Bienvenue à la Confiserie !</h1>
 
         <img src="media/ligne.png" alt="">
@@ -12,9 +12,11 @@ include_once("menu.php");
             <p>Bienvenue sur notre boutique en ligne ! <br> Depuis ce site, vous pourrez accéder à toutes les boutiques de la Confiserie et toutes les délicieuses friandises en stock !</p>
         </div>
     
-        <div class="bouton fond-clair">
-            <a href="boutique.php">Vers la Boutique</a>
-        </div>
+        <a href="boutique.php">
+            <div id="bouton-boutique" class="bouton fond-clair">
+                <h4>Vers la boutique</h4>
+            </div>
+        </a>
 
         <div class="presentation">
             <p class="paragraphe">
