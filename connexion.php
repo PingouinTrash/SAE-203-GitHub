@@ -11,8 +11,8 @@ include_once("menu.php");
       <input type="password" placeholder="Mot de passe">
     </div>
      
-    <div>
-      <button type="submit">Se connecter</button>
+    <div id="bouton-connexion">
+      <button type="submit" class="bouton fond-sombre">Se connecter</button>
     </div>
   </form>
 

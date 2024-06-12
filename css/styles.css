@@ -1,4 +1,6 @@
-/* ------ Header ------ */ 
+/* -------------------------------- PAGES -------------------------------- */
+
+/* -------- Header -------- */ 
 
 header {
     width: 100%;
@@ -38,37 +40,13 @@ header nav ul li a:hover {
     background-color: white;
 }
 
-.logo-header {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    height: 8rem;
-}
-
-.logo-header img {
-    position: absolute;
-}
-
-.logo-header .fond {
-    rotate: 180deg;
-    height: 100%;
-    width: 100%;
-    z-index: 4;
-}
-
-.logo-header .logo {
-    height: 100%;
-    z-index: 6;
-}
-
-/* ------ Main------ */
+/* -------- Main -------- */
 
 main {
     margin-top: 15rem;
 }
 
-/* ------ Footer------ */
+/* -------- Footer -------- */
 
 footer {
     background-color: rgb(155, 155, 155);
@@ -89,7 +67,7 @@ footer {
     text-decoration: underline;
 }
 
-/* ------ Index ------ */ 
+/* -------- Index -------- */ 
 
 body {
     margin: 0;
@@ -100,7 +78,7 @@ body {
     justify-content: center;
 }
 .presentation{
-    background-color: #9f101050;
+    background-color: #E7C3C3;
     color: #9f1010;
     font-family: "Lora", serif;
     font-size: 1rem;
@@ -133,7 +111,7 @@ h1{
     margin-right: 14%;
 }
 
-/* ---- Boutiques ---- */ 
+/* -------- Boutiques -------- */ 
 
 .Boutique{
     background-color: #9F1010;
@@ -141,14 +119,16 @@ h1{
     display: flex;
     margin-bottom: 1.5rem;
 }
+
 .Boutique img {
     margin: 1rem;
     width: 150px;
     height: 150px;
     border: 0.2rem solid white;
 }
+
 .Liste{
-    background-color: #9f101050;
+    background-color: #E7C3C3;
     color: #9f1010;
     font-family: "Lora", serif;
     font-size: 1rem;
@@ -158,6 +138,7 @@ h1{
     margin-top: 1%;
     margin-bottom: 1%;
 }
+
 h2{
     display: flex;
     justify-content: center;
@@ -166,8 +147,9 @@ h2{
     font-weight: 900; 
     margin-bottom: 0%;
     margin-top: 2rem;
-    background-color: #9f10105c;
+    background-color: #9F1010;
 }
+
 h3 {
     display: flex;
     justify-content: center;
@@ -175,7 +157,7 @@ h3 {
     font-family: "Lora", serif;
 }
 
-/* ---- Produits ---- */
+/* -------- Produits -------- */
 
 .namepage {
     color: #9F1010;
@@ -184,6 +166,7 @@ h3 {
     margin-right: 20%;
 
 }
+
 .retour{
     color: #9F1010;
     font-family: "Lora", serif;
@@ -193,6 +176,7 @@ h3 {
     margin-top: 10%;
 
 }
+
 .retour:hover{
     text-decoration: underline;
 }
@@ -202,6 +186,7 @@ h3 {
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .item{
     background-color: #9F1010;
     padding: 1.5rem;
@@ -209,17 +194,20 @@ h3 {
     color: white;
     margin: 1.5rem;
 }
+
 .item img{
     width: 200px;
     height: 150px;
     border: 0.2rem solid white;
 
 }
+
 .item h2 {
     margin-bottom: 0px;
 }
 
-/* ---- Connexion ---- */
+/* -------- Connexion -------- */
+
 form {
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -230,33 +218,75 @@ form {
     margin-left: 25%;
     margin-right: 25%;
   }
-  form h1{
+
+form h1{
     color: #ffffff;
     text-align:center;
-  }
-  form p.choose-email{
+}
+
+form p.choose-email{
     text-align:center;
-  }
-  form .inputs {
+}
+
+form .inputs {
     display: flex;
     flex-direction: column;
-  }
-  form .inputs input[type='ID'], input[type='password']{
+}
+
+form .inputs input[type='ID'], input[type='password']{
     padding: 15px;
     border:none;
     border-radius: 5px;
     background-color:#f2f2f2;
     margin-bottom: 15px;
-  }
+}
 
-  form button{
+/* -------------------------------- COMPOSANTS -------------------------------- */
+
+/* -------- Boutons -------- */
+
+.bouton {
+    color: #FFFFFF;
+    border: 0.2rem solid #9F1010;
+    background-color: #9F1010;
     padding: 15px 25px;
-    border-radius: 5px;
-    border:none;
     font-size: 1rem;
-    color: #9F1010;
-    background-color: #ffffff;
     outline:none;
     cursor:pointer;
+    text-decoration: none;
+}
 
-  }
+.bouton .fond-sombre {
+    border: 0.2rem solid #FFFFFF;
+}
+
+.bouton:hover {
+    color: #9F1010;
+    background-color: #FFFFFF;
+}
+
+/* -------- Logos -------- */
+
+.logo-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 8rem;
+}
+
+.logo-header img {
+    position: absolute;
+}
+
+.logo-header .fond {
+    rotate: 180deg;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+}
+
+.logo-header .logo {
+    height: 100%;
+    z-index: 6;
+}
