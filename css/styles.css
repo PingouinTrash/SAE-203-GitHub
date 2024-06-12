@@ -71,18 +71,20 @@ main {
 /* ------ Footer------ */
 
 footer {
-    background-color: rgb(154, 153, 153);
+    background-color: rgb(155, 155, 155);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
 }
+
 .footer a {
     text-decoration: none;
     color: rgb(0, 0, 0);
     margin: 2rem;
     font-family: "Lora", serif;
 }
+
 .footer a:hover {
     text-decoration: underline;
 }

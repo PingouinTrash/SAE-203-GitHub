@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>La Confiserie Acceuil</title>
+        <title>La Confiserie</title>
 
         <link href="css/styles.css" rel="stylesheet">
 

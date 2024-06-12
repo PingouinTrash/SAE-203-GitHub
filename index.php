@@ -2,7 +2,7 @@
 include_once("header.php");
 include_once("menu.php");
 ?>
-<main>
+
     <section class="acceuil">
         <h1>Bienvenue à la Confiserie !</h1>
 
@@ -12,12 +12,12 @@ include_once("menu.php");
             <p>Bienvenue sur notre boutique en ligne ! <br> Depuis ce site, vous pourrez accéder à toutes les boutiques de la Confiserie et toutes les délicieuses friandises en stock !</p>
         </div>
     
-        <div>
+        <div class="bouton">
             <a href="boutique.php">Vers la Boutique</a>
         </div>
 
         <div class="presentation">
-            <p>
+            <p class="paragraphe">
                 La confiserie est une entreprise familliale créée en 1847 par Emile Bonpère à Aix en Provence. Spécialisée dans la fabrication de calissons, "La Confiserie" a très rapidement étendue son catalogue de produits à d'autre sucreries : Sucettes, Nougats, Berlingots, Sucres d'orges, Boules de gommes, Caramel, Dragée, Guimauve, Marrons Glacés... mais surtout la Bergamote de Nancy ! pour laquelle "La Confiserie" dispose d'une dérogation particulière pour sa fabrication (normalement fabriquée uniquement à Nancy).
                 <br><br>
                 En 1985 Emile cède son entreprise à sa fille Chantal qui fera en sorte de maintenir la fabrication artisanale des sucreries à Aix malgré un contexte conccurentiel de plus en plus dur. En 2020, c'est au tour d'Annie de rejoindre l'entreprise familliale. Titulaire d'un MBA obtenue aux USA, elle décide de rentrer en France pour aider sa mère et développe une stratégie de commercialisation de la production familliale à travers un réseau international de grossistes spécialisés dans la revente des produits maisons. 
@@ -28,7 +28,6 @@ include_once("menu.php");
             </p>
         </div>
     </section>
-</main>
 
 <?php
 include_once("footer.php");

@@ -1,3 +1,4 @@
+  </main>
     <footer>
       <nav class="footer">
         <a href="index.php">Accueil</a>
