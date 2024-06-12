@@ -269,6 +269,10 @@ form .inputs input[type='ID'], input[type='password']{
     background-color: #FFFFFF;
 }
 
+button.bouton {
+    border: 0.2rem solid #FFFFFF;
+}
+
 /* -------- Liens -------- */
 
 a {
@@ -276,8 +280,6 @@ a {
 }
 
 /* -------- Titres -------- */
-
-…
 
 /* -------- Cards -------- */
 

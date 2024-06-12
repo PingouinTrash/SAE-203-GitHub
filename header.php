@@ -22,7 +22,7 @@ include_once("constantes.php");
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet"> 
         
-        <script src="js/modale.js"></script>
+        <script src="js/app.js"></script>
     </head>
 
     <body>
