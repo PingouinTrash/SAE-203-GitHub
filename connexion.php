@@ -18,7 +18,7 @@ include_once("menu.php");
     </div>
      
     <div id="bouton-connexion">
-      <button type="submit" class="bouton fond-sombre">Se connecter</button>
+      <button type="submit" class="bouton fond-sombre"><h4>Se connecter</h4></button>
     </div>
   </form>
 

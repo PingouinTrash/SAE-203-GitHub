@@ -1,5 +1,13 @@
 /* -------------------------------- PAGES -------------------------------- */
 
+/* -------- Body -------- */
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
 /* -------- Header -------- */ 
 
 header {
@@ -70,12 +78,13 @@ header nav ul li a:hover {
 
 main {
     margin-top: 17.5rem;
+    margin-bottom: 2.5rem;
 }
 
 /* -------- Footer -------- */
 
 footer {
-    background-color: rgb(155, 155, 155);
+    background-color: #9F1010;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,7 +93,7 @@ footer {
 
 .footer a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: #FFFFFF;
     margin: 2rem;
     font-family: "Lora", serif;
 }
@@ -125,6 +134,7 @@ h1 {
     color: #9F1010;
     font-family: "Tangerine";
     font-weight: 900;
+    margin-top: 0;
 }
 
 .accueil a {
@@ -261,6 +271,12 @@ form .inputs input[type='ID'], input[type='password']{
 
 #bouton-connexion {
     align-self: center;
+}
+
+#bouton-connexion button.bouton {
+    padding: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .bouton:hover {

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("constantes.php");
+include_once("acces_bdd.php");
 ?>
 
 <!DOCTYPE html>
