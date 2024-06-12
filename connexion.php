@@ -5,7 +5,13 @@ include_once("menu.php");
 
   <form>
     <h1>Se connecter</h1>
-     
+    
+    <?php
+      if (isset($_SESSION["error"])){
+        echo($_SESSION["error"]);
+        unset($_SESSION["error"]);
+      }
+    ?>
     <div class="inputs">
       <input type="ID" placeholder="Identifiant" />
       <input type="password" placeholder="Mot de passe">

@@ -5,8 +5,8 @@
     </div>
     <nav class="menu">
         <ul>
+            <li><a href="index.php">Accueil</a></li>
             <li><a href="boutique.php">Boutiques</a></li>
-            <li><a href="produit.php">produit</a></li>
             <li><a href="panier.php">Panier</a></li>
             <li><a href="connexion.php">Connexion</a></li>
         </ul>

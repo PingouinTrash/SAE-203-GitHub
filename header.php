@@ -1,3 +1,8 @@
+<?php
+session_start();
+include_once("constantes.php");
+?>
+
 <!DOCTYPE html>
 <html lang="fr" class="h-100">
     <head>

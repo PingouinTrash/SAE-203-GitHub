@@ -12,7 +12,7 @@ const DB_PASSWORD = '';
 const DB_DATABASE = 'serveur_la_confiserie_sae202';
 
 try {
-    $PDO = new PDO(
+    $bdd = new PDO(
         DB_DRIVER . ':host=' . DB_HOST . ';dbname=' . DB_DATABASE . ';port=' . DB_PORT,
         DB_USERNAME,
         DB_PASSWORD
@@ -23,8 +23,8 @@ try {
 }
 
 function query($sql){
-    global $PDO;
-    $stmt = $PDO->query($sql);
+    global $bdd;
+    $stmt = $bdd->query($sql);
     return $stmt->fetchAll();
 }
 

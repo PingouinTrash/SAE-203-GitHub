@@ -29,15 +29,41 @@ header nav ul li a {
     font-size: 1.5rem;
     text-decoration: none;
     color: white;
-    padding: 2rem;
-    margin-left: 2.5rem;
-    margin-right: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     border: 0.2rem solid #9F1010;
+    cursor: pointer;
 }
 
 header nav ul li a:hover {
     color: #9F1010;
     background-color: white;
+}
+
+.logo-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 8rem;
+}
+
+.logo-header img {
+    position: absolute;
+}
+
+.logo-header .fond {
+    rotate: 180deg;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+}
+
+.logo-header .logo {
+    height: 100%;
+    z-index: 6;
 }
 
 /* -------- Main -------- */
@@ -96,7 +122,7 @@ h1{
     font-family: "Tangerine";
     font-weight: 900;
 }
-.acceuil a {
+.accueil a {
     padding: 5px;
     color: white;
     font-family: "Lora", serif;
@@ -104,7 +130,7 @@ h1{
     margin-left: 45%;
 
 }
-.acceuil img {
+.accueil img {
     width: 70%;
     margin-top: -12rem;
     margin-left: 15%;
@@ -113,21 +139,9 @@ h1{
 
 /* -------- Boutiques -------- */ 
 
-.Boutique{
-    background-color: #9F1010;
-    color: white;
-    display: flex;
-    margin-bottom: 1.5rem;
-}
 
-.Boutique img {
-    margin: 1rem;
-    width: 150px;
-    height: 150px;
-    border: 0.2rem solid white;
-}
 
-.Liste{
+.liste-boutiques {
     background-color: #E7C3C3;
     color: #9f1010;
     font-family: "Lora", serif;
@@ -147,7 +161,6 @@ h2{
     font-weight: 900; 
     margin-bottom: 0%;
     margin-top: 2rem;
-    background-color: #9F1010;
 }
 
 h3 {
@@ -159,8 +172,9 @@ h3 {
 
 /* -------- Produits -------- */
 
-.namepage {
+.nom-de-page {
     color: #9F1010;
+    background-color: #E7C3C3;
     padding: 0.5rem;
     margin-left: 20%;
     margin-right: 20%;
@@ -177,34 +191,17 @@ h3 {
 
 }
 
-.retour:hover{
+.retour:hover {
     text-decoration: underline;
 }
 
-.produit{
+.liste-produits {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.item{
-    background-color: #9F1010;
-    padding: 1.5rem;
-    padding-bottom: 0px;
-    color: white;
-    margin: 1.5rem;
-}
 
-.item img{
-    width: 200px;
-    height: 150px;
-    border: 0.2rem solid white;
-
-}
-
-.item h2 {
-    margin-bottom: 0px;
-}
 
 /* -------- Connexion -------- */
 
@@ -247,13 +244,15 @@ form .inputs input[type='ID'], input[type='password']{
 
 .bouton {
     color: #FFFFFF;
-    border: 0.2rem solid #9F1010;
     background-color: #9F1010;
     padding: 15px 25px;
     font-size: 1rem;
-    outline:none;
-    cursor:pointer;
+    cursor: pointer;
     text-decoration: none;
+}
+
+.bouton .fond-clair {
+    border: 0.2rem solid #9F1010;
 }
 
 .bouton .fond-sombre {
@@ -265,28 +264,33 @@ form .inputs input[type='ID'], input[type='password']{
     background-color: #FFFFFF;
 }
 
-/* -------- Logos -------- */
+/* -------- Cards -------- */
 
-.logo-header {
-    position: relative;
+.card {
+    padding: 1rem;
+    margin: 1rem;
+    border: 0.2rem solid #9F1010;
+    color: #FFFFFF;
+    background-color: #9F1010;
+}
+
+.card:hover {
+    color: #9F1010;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+.boutique {
     display: flex;
-    justify-content: center;
-    width: 100vw;
-    height: 8rem;
 }
 
-.logo-header img {
-    position: absolute;
+.image {
+    margin: 0.5rem;
+    width: 12rem;
+    height: 10rem;
+    border: 0.2rem solid white;
 }
 
-.logo-header .fond {
-    rotate: 180deg;
-    height: 100%;
-    width: 100%;
-    z-index: 4;
-}
-
-.logo-header .logo {
-    height: 100%;
-    z-index: 6;
+.card:hover .image {
+    border: 0.2rem solid #9F1010;
 }
