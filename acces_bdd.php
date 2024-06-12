@@ -17,6 +17,7 @@ try {
         DB_USERNAME,
         DB_PASSWORD
     );
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (Exception $ex) {
     echo ($ex->getMessage());
     die;
@@ -25,7 +26,7 @@ try {
 function query($sql){
     global $bdd;
     $stmt = $bdd->query($sql);
-    return $stmt->fetchAll();
+    return $stmt;
 }
 
 ?>
