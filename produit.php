@@ -4,9 +4,13 @@ include_once("menu.php");
 ?>
 
 <section>
-    <a class="retour" href="boutique.php">< Retour aux boutiques</a>
+    <div class="retour">
+        <a href="boutique.php">< Retour aux boutiques</a>
+    </div>
 
-    <h2 class="nom-de-page">Catalogue des confiseries</h2>
+    <div class="nom-de-page">
+        <h2>Catalogue des confiseries</h2>
+    </div>
 </section>
 
 <section class="liste-produits">

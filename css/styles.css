@@ -77,8 +77,10 @@ header nav ul li a:hover {
 /* -------- Main -------- */
 
 main {
-    margin-top: 17.5rem;
+    margin-top: 15rem;
     margin-bottom: 2.5rem;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 /* -------- Footer -------- */
@@ -121,10 +123,6 @@ body {
     font-size: 1rem;
     padding-right: 1rem;
     padding-left: 1rem;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 1%;
-    margin-bottom: 1%;
 }
 
 h1 {
@@ -134,7 +132,6 @@ h1 {
     color: #9F1010;
     font-family: "Tangerine";
     font-weight: 900;
-    margin-top: 0;
 }
 
 .accueil a {
@@ -150,33 +147,27 @@ h1 {
 
 /* -------- Boutiques -------- */ 
 
-
-
 .liste-boutiques {
     background-color: #E7C3C3;
     color: #9f1010;
     font-family: "Lora", serif;
     font-size: 1rem;
     padding: 1rem;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 1%;
-    margin-bottom: 1%;
 }
 
-h2{
-    display: flex;
-    justify-content: center;
+.boutique-desc {
+    margin-left: 1rem;
+}
+
+h2 {
     font-size: 4rem;
     font-family: "Tangerine";
-    font-weight: 900; 
-    margin-bottom: 0%;
-    margin-top: 2rem;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 h3 {
-    display: flex;
-    justify-content: center;
     font-size: 1.5rem;
     font-family: "Lora", serif;
 }
@@ -184,21 +175,27 @@ h3 {
 /* -------- Produits -------- */
 
 .nom-de-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
     color: #9F1010;
     background-color: #E7C3C3;
-    padding: 0.5rem;
-    margin-left: 20%;
-    margin-right: 20%;
-
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
 }
 
-.retour{
+.titre-boutique {
+    margin-top: 2rem;
+}
+
+.retour {
     color: #9F1010;
     font-family: "Lora", serif;
     font-size: 1.2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
     text-decoration: none;
-    margin-left: 2.5rem;
-
 }
 
 .retour:hover {
@@ -265,8 +262,8 @@ form .inputs input[type='ID'], input[type='password']{
 #bouton-boutique {
     padding: 0.1rem;
     margin: 1rem;
-    margin-left: 25rem;
-    margin-right: 25rem;
+    margin-left: 30vw;
+    margin-right: 30vw;
 }
 
 #bouton-connexion {
