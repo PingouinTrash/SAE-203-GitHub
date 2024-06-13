@@ -17,22 +17,25 @@ include_once("menu.php");
     <?php
 
     $boutique_id = $_GET["param_id"];
-    $sql = "SELECT confiserie_id FROM stocks WHERE boutique_id LIKE %'$boutique_id'%";
+    $stock_id = "SELECT confiserie_id FROM stocks WHERE boutique_id LIKE %$boutique_id%";
+    $sql = "SELECT * FROM confiseries WHERE id LIKE %$stock_id%";
     $resultat = query($sql);
 
     if ($resultat && $resultat->rowCount() > 0) {
         while($row = $resultat->fetch(PDO::FETCH_ASSOC)) {
-            echo ("");
+            echo ("
+                <button type='submit' class='card produit'>
+                    <img class='image' src='media/Bonbon.jpg' alt='Boutique de ...'>
+                    <h3>" . $row["nom"] . "</h3>
+                </button>"
+            );
         }
-    } else {
+    }
+    else {
         echo "0 résultats";
     }
 
     ?>
-    <button type="submit" class="card produit">
-        <img class="image" src="media/Bonbon.jpg" alt="Boutique de ...">
-        <h3>Nom friandise</h3>
-    </button>
 </section>
 
 <?php
