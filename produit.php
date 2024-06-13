@@ -46,3 +46,7 @@ include_once("menu.php");
         <p id="modalDescription">Description du produit</p>
     </div>
 </div>
+
+<?php
+include_once("footer.php");
+?>
