@@ -18,7 +18,9 @@ try {
         DB_PASSWORD
     );
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (Exception $ex) {
+} 
+
+catch (Exception $ex) {
     echo ($ex->getMessage());
     die;
 }
