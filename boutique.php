@@ -32,7 +32,8 @@ include_once("acces_bdd.php");
                     </a>"
                 );
             }
-        } else {
+        } 
+        else {
             echo "0 résultats";
         }
         ?>

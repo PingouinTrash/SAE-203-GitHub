@@ -18,7 +18,8 @@ include_once("menu.php");
     <?php
 
     $boutique_id = $_GET["param_id"];
-    $sql = "SELECT confiserie_id FROM stocks WHERE boutique_id LIKE %'$boutique_id'%";
+    $stock_id = "SELECT confiserie_id FROM stocks WHERE boutique_id LIKE %$boutique_id%";
+    $sql = "SELECT * FROM confiseries WHERE id LIKE %$stock_id%";
     $resultat = query($sql);
 
     if ($resultat && $resultat->rowCount() > 0) {
@@ -28,7 +29,8 @@ include_once("menu.php");
                 <h3>Nom friandise</h3>
             </button>");
         }
-    } else {
+    }
+    else {
         echo "0 résultats";
     }
 
