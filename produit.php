@@ -2,6 +2,7 @@
 include_once("header.php");
 include_once("menu.php");
 ?>
+<script> src="js/app.js" </script>
 
 <section>
     <div class="retour">
@@ -34,6 +35,7 @@ include_once("menu.php");
         <h3>Nom friandise</h3>
     </button>
 </section>
+
 
 <?php
 include_once("footer.php");
