@@ -18,8 +18,7 @@ include_once("menu.php");
     <?php
 
     $boutique_id = $_GET["param_id"];
-    $stock_id = "SELECT confiserie_id FROM stocks WHERE boutique_id LIKE %$boutique_id%";
-    $sql = "SELECT * FROM confiseries WHERE id LIKE %$stock_id%";
+    $sql = "SELECT * FROM confiseries JOIN stocks ON confiseries.id = stocks.confiserie_id WHERE stocks.boutique_id = $boutique_id";
     $resultat = query($sql);
 
     if ($resultat && $resultat->rowCount() > 0) {

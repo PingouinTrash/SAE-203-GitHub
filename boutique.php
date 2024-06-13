@@ -21,7 +21,7 @@ include_once("acces_bdd.php");
         if ($resultat && $resultat->rowCount() > 0) {
             while($row = $resultat->fetch(PDO::FETCH_ASSOC)) {
                 echo (
-                    "<a href='produit.php?param_id=".$row["id"]."'>
+                    "<a href='produit.php?param_id=" . $row["id"] . "'>
                         <div class='card boutique'>
                             <img class='image' src='media/Boutique.jpg' alt='Boutique de " . $row["nom"] . "'>
                             <div class='boutique-desc'>
