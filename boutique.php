@@ -16,17 +16,21 @@ include_once("acces_bdd.php");
         <?php
 
         $sql = "SELECT * FROM boutiques";
-        $result = query($sql);
+        $resultat = query($sql);
 
-        if ($result && $result->rowCount() > 0) {
-            while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                echo "<a href='produit.php'>";
-                echo "<div class='card boutique'>";
-                echo "<img class='image' src='media/Boutique.jpg' alt='Boutique de " . $row["nom"] . "'>";
-                echo "<div class='boutique-desc'>";
-                echo "<h2 class='titre-boutique'>" . $row["nom"] . "</h2>";
-                echo "<h3>" . $row["numero_rue"] . " " . $row["nom_adresse"] . "</h3>";
-                echo "</div></div></a>";
+        if ($resultat && $resultat->rowCount() > 0) {
+            while($row = $resultat->fetch(PDO::FETCH_ASSOC)) {
+                echo (
+                    "<a href='produit.php?param_id=".$row["id"]."'>
+                        <div class='card boutique'>
+                            <img class='image' src='media/Boutique.jpg' alt='Boutique de " . $row["nom"] . "'>
+                            <div class='boutique-desc'>
+                                <h2 class='titre-boutique'>" . $row["nom"] . "</h2>
+                                <h3>" . $row["numero_rue"] . " " . $row["nom_adresse"] . "</h3>
+                            </div>
+                        </div>
+                    </a>"
+                );
             }
         } else {
             echo "0 résultats";
