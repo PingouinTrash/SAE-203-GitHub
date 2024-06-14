@@ -5,7 +5,7 @@ include_once("../menu.php");
 
 <section>
     <div class="nom-de-page">
-        <h2>Gestion boutique</h2>
+        <h2>Gestion des boutiques</h2>
     </div>
 </section>
 
@@ -15,31 +15,33 @@ include_once("../menu.php");
             <h3>Ajouter une boutique</h3>
         </div>
         <form action="" method="post">
-            <div>
-                <label for="nom">Nom de la boutique : </label>
-                </br>
-                <label for="numero_rue">Numéro de rue : </label>
-                </br>
-                <label for="nom_adresse">Nom de l'adresse : </label>
-                </br>
-                <label for="code_postal">Code postal : </label>
-                </br>
-                <label for="ville">Ville : </label>
-                </br>
-                <label for="pays">Pays : </label>
-            </div>
-            <div>
-                <input type="text" id="nom" name="nom">
-                </br>
-                <input type="text" id="numero_rue" name="numero_rue">
-                </br>
-                <input type="text" id="nom_adresse" name="nom_adresse">
-                </br>
-                <input type="text" id="code_postal" name="code_postal">
-                </br>
-                <input type="text" id="ville" name="ville">
-                </br>
-                <input type="text" id="pays" name="pays">
+            <div id="labels-ajout">
+                <div>
+                    <label for="nom">Nom de la boutique : </label>
+                    </br>
+                    <label for="numero_rue">Numéro de rue : </label>
+                    </br>
+                    <label for="nom_adresse">Nom de l'adresse : </label>
+                    </br>
+                    <label for="code_postal">Code postal : </label>
+                    </br>
+                    <label for="ville">Ville : </label>
+                    </br>
+                    <label for="pays">Pays : </label>
+                </div>
+                <div>
+                    <input type="text" id="nom" name="nom">
+                    </br>
+                    <input type="text" id="numero_rue" name="numero_rue">
+                    </br>
+                    <input type="text" id="nom_adresse" name="nom_adresse">
+                    </br>
+                    <input type="text" id="code_postal" name="code_postal">
+                    </br>
+                    <input type="text" id="ville" name="ville">
+                    </br>
+                    <input type="text" id="pays" name="pays">
+                </div>
             </div>
             <button type="button">Ajouter une boutique</button>
         </form>

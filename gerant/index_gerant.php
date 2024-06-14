@@ -5,7 +5,7 @@ include_once("../menu.php");
 
 <section>
     <div class="nom-de-page">
-        <h2>Gestion stock</h2>
+        <h2>Gestion des stocks</h2>
     </div>
 </section>
 
