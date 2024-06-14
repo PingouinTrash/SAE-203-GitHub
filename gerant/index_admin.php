@@ -1,9 +1,5 @@
 <?php
-include_once("
-
-
-
-header.php");
+include_once("header.php");
 include_once("menu.php");
 include_once("acces_bdd.php");
 ?>
