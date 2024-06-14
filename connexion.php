@@ -3,7 +3,7 @@ include_once("header.php");
 include_once("menu.php");
 ?>
 
-  <form action="<?php echo(ROOT);?>verif_connexion.php" method="post">
+  <form action="<?php echo(ROOT);?>verif_connexion.php" method="post" id="connexion">
     <h1>Se connecter</h1>
     
     <?php

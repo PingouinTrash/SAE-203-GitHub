@@ -217,7 +217,7 @@ h3 {
 
 /* -------- Connexion -------- */
 
-form {
+#connexion {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -229,21 +229,21 @@ form {
     margin-right: 25%;
   }
 
-form h1{
+#connexion h1{
     color: #ffffff;
     text-align:center;
 }
 
-form p.choose-email{
+#connexion p.choose-email{
     text-align:center;
 }
 
-form .inputs {
+#connexion .inputs {
     display: flex;
     flex-direction: column;
 }
 
-form .inputs input[type='ID'], input[type='password']{
+#connexion .inputs input[type='ID'], input[type='password']{
     padding: 15px;
     border:none;
     border-radius: 5px;
