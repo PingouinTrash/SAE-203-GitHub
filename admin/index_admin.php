@@ -1,21 +1,46 @@
 <?php
-
 include_once("../constantes.php");
 include_once("../menu.php");
 ?>
 
+<section>
+    <div class="nom-de-page">
+        <h2>Gestion boutique</h2>
+    </div>
+</section>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<section>
+    <button type="button">Ajouter une boutique</button>
+    <button type="button">supprimer une boutique</button>
+</section>
+
+<section id="liste-boutiques" class="liste">
+    <div>
+        <?php
+
+        if ($resultat && $resultat->rowCount() > 0) {
+            while($row = $resultat->fetch(PDO::FETCH_ASSOC)) {
+                echo (
+                    "<a href='produit.php?param_id=" . $row["id"] . "'>
+                        <div class='card boutique'>
+                            <img class='image' src='media/Boutique.jpg' alt='Boutique de " . $row["nom"] . "'>
+                            <div class='boutique-desc'>
+                                <h2 class='titre-boutique'>" . $row["nom"] . "</h2>
+                                <h3>" . $row["numero_rue"] . " " . $row["nom_adresse"] . ", " . $row["code_postal"] . " " . $row["ville"] . ", " . $row["pays"] . "</h3>
+                            </div>
+                        </div>
+                    </a>"
+                );
+            }
+        } 
+
+        else {
+            echo "0 résultats";
+        }
+
+        ?>
+    </div>
+</section>
 
 <?php
 include_once(ROOT. "footer.php");

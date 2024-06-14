@@ -6,6 +6,7 @@ include_once("constantes.php");
 $username = $_POST["identifiant"];
 $password = $_POST["mot_de_passe"];
 
+
 $result = verif_connexion($username, $password);
 
 if ($result == true){
@@ -18,6 +19,7 @@ if ($result == true){
         header("Location: " . ROOT . "admin/index_admin.php");
         exit();
     }
+
     elseif("gerant" == $_SESSION["role"]){
         header("Location: " . ROOT . "gerant/index_gerant.php");
         exit();
@@ -32,15 +34,14 @@ else{
 
 function verif_connexion($username, $password){
     $login = query("SELECT username, password, role, id FROM utilisateurs");
+    $password = md5($password);
+
     foreach ($login as $value){
-        $password = md5($password);
         if (($value["username"] == $username) && ($value["password"] == $password)) {
             return $login[0];
         }
-        else {
-            return false;
-        }
     }
+    return false;
 }
 
 ?>
