@@ -23,10 +23,12 @@ include_once("menu.php");
 
     if ($resultat && $resultat->rowCount() > 0) {
         while($row = $resultat->fetch(PDO::FETCH_ASSOC)) {
-            echo ("<button type='button' class='card produit openModalBtn'>
+            echo (
+            "<button type='button' class='card produit openModalBtn'>
                 <img class='image' src='media/Bonbon.jpg' alt='Boutique de ...'>
-                <h3>Nom friandise</h3>
-            </button>");
+                <h3>" . $row["nom"] . "</h3>
+            </button>"
+            );
         }
     }
     else {

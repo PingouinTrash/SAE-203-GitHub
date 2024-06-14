@@ -345,7 +345,7 @@ a {
     border: 0.2rem solid #9F1010;
 }
 
-/* -------------------------------- MODAL -------------------------------- */
+/* -------------------------------- MODALE -------------------------------- */
 
 .modal {
     display: none; 
@@ -362,10 +362,10 @@ a {
 
 
 .modal-content {
-    background-color: #f7e4e4;
+    background-color: #E7C3C3;
     margin: 15% auto; 
     padding: 20px;
-    border: 2px solid #8b0000;
+    border: 2px solid #9F1010;
     width: 80%; 
     max-width: 600px;
     display: flex;
@@ -384,7 +384,7 @@ a {
     top: 222px;
     right: 420px; 
     cursor: pointer;
-    background-color: #8b0000;
+    background-color: #9F1010;
     width: 55px;
     height: 55px;
     display: flex;
@@ -393,7 +393,7 @@ a {
 
 .close:hover,
 .close:focus {
-    color: #8b0000;
+    color: #9F1010;
     background-color: #ffffff;
     text-decoration: none;
     cursor: pointer;
@@ -402,7 +402,7 @@ a {
 .modal-image img {
     width: 200px;
     height: auto;
-    border: 3px solid #8b0000;
+    border: 0.2rem solid #9F1010;
     padding: none;
 }
 
@@ -415,14 +415,14 @@ a {
 }
 
 .modal-text h5 {
-    color: #8b0000;
+    color: #9F1010;
     font-family: "Lora", serif;
     font-size: 2rem;
     margin: 0;
 }
 
 .modal-text p {
-    color: #8b0000;
+    color: #9F1010;
     margin: 1rem ;
 }
 
@@ -434,7 +434,7 @@ a {
 }
 
 .add-to-cart {
-    background-color: #8b0000;
+    background-color: #9F1010;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -447,7 +447,7 @@ a {
 }
 
 .add-to-cart:hover {
-    background-color: #a52a2a;
+    background-color: #9F1010;
 }
 
 .quantity-control {
@@ -457,7 +457,7 @@ a {
 }
 
 .quantity-control button {
-    background-color: #8b0000;
+    background-color: #9F1010;
     color: white;
     border: none;
     cursor: pointer;
@@ -469,7 +469,7 @@ a {
 .quantity-control input {
     width: 50px;
     text-align: center;
-    border: 1px solid #8b0000;
+    border: 0.2rem solid #9F1010;
     margin: 0 5px;
     height: 46px;
     width: 50px;

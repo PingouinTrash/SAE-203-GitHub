@@ -24,10 +24,6 @@ if ($result == true){
         header("Location: http://localhost/sae-203-github/gerant/index_gerant.php");
         exit();
     }
-    elseif($result_sql == $result_sql["client"]){
-        header("Location: http://localhost/sae-203-github/index.php");
-        exit();
-    }
 }
 
 else{
