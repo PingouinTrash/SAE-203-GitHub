@@ -9,6 +9,10 @@ $password = $_POST["mot_de_passe"];
 
 $result = verif_connexion($username, $password);
 
+set($_SESSION['loggedin']);
+set($_SESSION['utilisateur']);
+set($_SESSION['role']);
+
 if ($result == true){
     $_SESSION["utilisateur"] = $username;
     $_SESSION["loggedin"] = true;
@@ -35,6 +39,7 @@ function verif_connexion($username, $password){
     foreach ($login as $value){
         $password = md5($password);
         if (($value["username"] == $username) && ($value["password"] == $password)) {
+            return true;
             return $login[0];
         }
         else {

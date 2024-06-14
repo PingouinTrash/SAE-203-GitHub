@@ -3,12 +3,12 @@
 session_start();
 
 unset($_SESSION['loggedin']);
-unset($_SESSION['id']);
-unset($_SESSION['username']);
+unset($_SESSION['utilisateur']);
+unset($_SESSION['role']);
 
 session_destroy();
 
-include_once("constants.php");
+include_once("constantes.php");
 
 header("location: ".ROOT."/index.php");
 exit();
