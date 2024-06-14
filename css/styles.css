@@ -14,7 +14,6 @@ header {
     width: 100%;
     top: 0;
     padding: 0;
-    z-index: 5;
 }
 
 header nav ul {
@@ -65,12 +64,12 @@ header nav ul li a:hover {
     rotate: 180deg;
     height: 100%;
     width: 100%;
-    z-index: 4;
+    z-index: 0;
 }
 
 .logo-header .logo {
     height: 100%;
-    z-index: 6;
+    z-index: 1;
 }
 
 /* -------- Main -------- */
