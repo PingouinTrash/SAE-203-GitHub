@@ -20,8 +20,8 @@ include_once("menu.php");
     $sql = "SELECT * FROM confiseries JOIN stocks ON confiseries.id = stocks.confiserie_id WHERE stocks.boutique_id = $boutique_id";
     $resultat = query($sql);
 
-    if ($resultat && $resultat->rowCount() > 0) {
-        while($row = $resultat->fetch(PDO::FETCH_ASSOC)) {
+    if ($resultat && count($resultat) > 0) {
+        foreach($resultat as $row) {
             echo (
             "<button type='button' class='card produit openModalBtn' 
                 data-nom='" . htmlspecialchars($row["nom"], ENT_QUOTES, 'UTF-8') . "'

@@ -18,8 +18,8 @@ include_once("acces_bdd.php");
         $sql = "SELECT * FROM boutiques";
         $resultat = query($sql);
 
-        if ($resultat && $resultat->rowCount() > 0) {
-            while($row = $resultat->fetch(PDO::FETCH_ASSOC)) {
+        if ($resultat && count($resultat) > 0) {
+            foreach($resultat as $row) {
                 echo (
                     "<a href='produit.php?param_id=" . $row["id"] . "'>
                         <div class='card boutique'>
