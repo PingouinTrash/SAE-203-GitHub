@@ -1,6 +1,6 @@
 <?php
-include_once(ROOT. "header.php");
-include_once(ROOT. "menu.php");
+include_once("header.php");
+include_once("menu.php");
 ?>
 
   <form action="<?php echo(ROOT);?>verif_connexion.php" method="post">

@@ -1,7 +1,11 @@
+<?php
+require_once("header.php");
+?>
+
 <header>
     <div class="logo-header">
-        <img class="logo" src="media/logoConfiserie.png" alt="Logo La Confiserie">
-        <img class="fond" src="media/Fond.png" alt="Fond marbre">
+        <img class="logo" src="<?php echo(ROOT);?>media/logoConfiserie.png" alt="Logo La Confiserie">
+        <img class="fond" src="<?php echo(ROOT);?>media/Fond.png" alt="Fond marbre">
     </div>
     <nav class="menu">
         <ul>

@@ -1,9 +1,9 @@
 <?php
-include_once("../constantes.php");
-include_once(ROOT. "header.php");
-include_once(ROOT. "menu.php");
+require_once("../constantes.php");
+require_once(ROOT. "header.php");
+require_once(ROOT. "menu.php");
 ?>
 
 <?php
-include_once(ROOT. "footer.php");
+require_once(ROOT. "footer.php");
 ?>
