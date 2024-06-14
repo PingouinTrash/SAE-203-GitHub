@@ -24,14 +24,17 @@ include_once("menu.php");
     if ($resultat && $resultat->rowCount() > 0) {
         while($row = $resultat->fetch(PDO::FETCH_ASSOC)) {
             echo (
-            "<button type='button' class='card produit openModalBtn'>
-                <img class='image' src='media/Bonbon.jpg' alt='Boutique de ...'>
-                <h3>" . $row["nom"] . "</h3>
+            "<button type='button' class='card produit openModalBtn' 
+                data-nom='" . htmlspecialchars($row["nom"], ENT_QUOTES, 'UTF-8') . "'
+                data-description='" . htmlspecialchars($row["description"], ENT_QUOTES, 'UTF-8') . "'
+                data-prix='" . htmlspecialchars($row["prix"], ENT_QUOTES, 'UTF-8') . "'
+                data-image='media/bonbon.jpg'>
+                <img class='image' src='media/bonbon.jpg' alt='bonbon'>
+                <h3>" . htmlspecialchars($row["nom"], ENT_QUOTES, 'UTF-8') . "</h3>
             </button>"
             );
         }
-    }
-    else {
+    } else {
         echo "0 résultats";
     }
 
@@ -47,19 +50,20 @@ include_once("menu.php");
         </div>
         <div class="modal-text">
             <h5>Bonbon acide</h5>
-            <p>Bonbon acide délicieux</p>
-            <p>0,15 €/pièce</p>
-            <!-- <div class="modal-actions">
+            <p class="description">Bonbon acide délicieux</p>
+            <p class="prix">0,15 €/pièce</p>
+            <div class="modal-actions">
                 <button class="add-to-cart">Ajouter au panier</button>
                 <div class="quantity-control">
                     <button class="decrease">-</button>
                     <input type="number" value="1" min="1">
                     <button class="increase">+</button>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
 </div>
+
 <?php
 include_once("footer.php");
 ?>

@@ -1,30 +1,35 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the modal
     var modal = document.getElementById("myModal");
-
-    // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
 
-    // Event delegation for dynamically created buttons
     document.body.addEventListener('click', function(event) {
-        if (event.target.classList.contains('openModalBtn')) {
+        if (event.target.closest('.openModalBtn')) {
+            var btn = event.target.closest('.openModalBtn');
+            var productName = btn.getAttribute('data-nom');
+            var productDescription = btn.getAttribute('data-description');
+            var productPrice = btn.getAttribute('data-prix');
+            var productImage = btn.getAttribute('data-image');
+            
+            modal.querySelector('h5').textContent = productName;
+            modal.querySelector('.description').textContent = productDescription;
+            modal.querySelector('.prix').textContent = productPrice + ' €/pièce';
+            modal.querySelector('.modal-image img').src = productImage;
+            modal.querySelector('.modal-image img').alt = productName;
+
             modal.style.display = "block";
         }
     });
 
-    // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modal.style.display = "none";
     }
 
-    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
     }
 
-    // Quantity control
     var decreaseBtn = document.querySelector('.decrease');
     var increaseBtn = document.querySelector('.increase');
     var quantityInput = document.querySelector('.quantity-control input');
