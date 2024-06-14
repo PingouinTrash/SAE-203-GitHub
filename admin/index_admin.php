@@ -1,8 +1,9 @@
 <?php
-include_once("header.php");
-include_once("menu.php");
+include_once("../constantes.php");
+include_once(ROOT. "header.php");
+include_once(ROOT. "menu.php");
 ?>
 
 <?php
-include_once("footer.php");
+include_once(ROOT. "footer.php");
 ?>

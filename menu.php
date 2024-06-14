@@ -5,10 +5,10 @@
     </div>
     <nav class="menu">
         <ul>
-            <li><a href="index.php">Accueil</a></li>
-            <li><a href="boutique.php">Boutiques</a></li>
-            <!-- <li><a href="panier.php">Panier</a></li> -->
-            <li><a href="connexion.php">Connexion</a></li>
+            <li><a href="<?php echo(ROOT);?>index.php">Accueil</a></li>
+            <li><a href="<?php echo(ROOT);?>boutique.php">Boutiques</a></li>
+            <!-- <li><a href="<?//php echo(ROOT);?>panier.php">Panier</a></li> -->
+            <li><a href="<?php echo(ROOT);?>connexion.php">Connexion</a></li>
         </ul>
     </nav>
 </header>

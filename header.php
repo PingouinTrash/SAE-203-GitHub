@@ -11,7 +11,7 @@ include_once("acces_bdd.php");
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>La Confiserie</title>
 
-        <link href="css/styles.css" rel="stylesheet">
+        <link href="<?php echo(ROOT);?>css/styles.css" rel="stylesheet">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@ include_once("acces_bdd.php");
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet"> 
         
-        <script src="js/app.js"></script>
+        <script src="<?php echo(ROOT);?>js/app.js"></script>
     </head>
 
     <body>

@@ -6,7 +6,7 @@ include_once("menu.php");
     <section class="accueil">
         <h1>Bienvenue à la Confiserie !</h1>
 
-        <img src="media/ligne.png" alt="">
+        <img src="<?php echo(ROOT);?>media/ligne.png" alt="">
 
         <div class="presentation">
             <p>Bienvenue sur notre boutique en ligne ! <br> Depuis ce site, vous pourrez accéder à toutes les boutiques de la Confiserie et toutes les délicieuses friandises en stock !</p>
