@@ -6,7 +6,10 @@ include_once("acces_bdd.php");
 
 <section>
     <div class="nom-de-page">
-        <h2>Gestion stock</h2>
+        <h2>Gestion boutique</h2>
+        <button type="button">Ajouter une boutique</button>
+        <button type="button">supprimer une boutique</button>
+
     </div>
 </section>
 
