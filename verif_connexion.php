@@ -6,7 +6,6 @@ include_once("constantes.php");
 $username = $_POST["identifiant"];
 $password = $_POST["mot_de_passe"];
 
-
 $result = verif_connexion($username, $password);
 
 if ($result == true){
@@ -14,34 +13,46 @@ if ($result == true){
     $_SESSION["loggedin"] = true;
     $_SESSION["role"] = $result["role"];
 
-
     if ("admin" == $_SESSION["role"]){
-        header("Location: " . ROOT . "admin/index_admin.php");
+        // header("Location: " . ROOT . "admin/index_admin.php");
         exit();
     }
 
     elseif("gerant" == $_SESSION["role"]){
-        header("Location: " . ROOT . "gerant/index_gerant.php");
+        // header("Location: " . ROOT . "gerant/index_gerant.php");
         exit();
     }
 }
 
 else{
     $_SESSION["error"] = "Mauvais identifiant ou mot de passe !";
-    header("Location: " . ROOT . "connexion.php");
+    // header("Location: " . ROOT . "connexion.php");
     exit();
 }
 
 function verif_connexion($username, $password){
-    $login = query("SELECT username, password, role, id FROM utilisateurs");
+
+    // $login = query("SELECT username, password, role, id FROM utilisateurs");
+    $login = query("SELECT * FROM utilisateurs WHERE username LIKE '%$username' AND password LIKE '%$password'");
     $password = md5($password);
 
-    foreach ($login as $value){
-        if (($value["username"] == $username) && ($value["password"] == $password)) {
-            return $login[0];
-        }
+    if (($login["username"] == $username) && ($login["password"] == $password)) {
+        return $login[0];
     }
-    return false;
+    else {
+        return false;
+    }
+
+    // foreach ($login as $value){
+    //     if (($value["username"] == $username) && ($value["password"] == $password)) {
+    //         print_r("<pre>");
+    //         print_r($result);
+    //         print_r("</pre>");
+    //         return $login[0];
+    //     }
+    // }
+    // return false;
+
 }
 
 ?>
