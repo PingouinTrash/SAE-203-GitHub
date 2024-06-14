@@ -23,7 +23,7 @@ include_once("menu.php");
 
     if ($resultat && $resultat->rowCount() > 0) {
         while($row = $resultat->fetch(PDO::FETCH_ASSOC)) {
-            echo ("<button type='submit' class='card produit'>
+            echo ("<button type='button' class='card produit openModalBtn'>
                 <img class='image' src='media/Bonbon.jpg' alt='Boutique de ...'>
                 <h3>Nom friandise</h3>
             </button>");
@@ -40,13 +40,24 @@ include_once("menu.php");
 <div id="myModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <h2>Détails du produit</h2>
-        <img src="media/Bonbon.jpg" alt="Produit image" id="modalImage">
-        <p id="modalName">Nom du produit</p>
-        <p id="modalDescription">Description du produit</p>
+        <div class="modal-image">
+            <img src="media/bonbon.jpg" alt="Bonbon acide">
+        </div>
+        <div class="modal-text">
+            <h5>Bonbon acide</h5>
+            <p>Bonbon acide délicieux</p>
+            <p>0,15 €/pièce</p>
+            <div class="modal-actions">
+                <button class="add-to-cart">Ajouter au panier</button>
+                <div class="quantity-control">
+                    <button class="decrease">-</button>
+                    <input type="number" value="1" min="1">
+                    <button class="increase">+</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
 <?php
 include_once("footer.php");
 ?>

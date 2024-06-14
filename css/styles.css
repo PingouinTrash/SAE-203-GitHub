@@ -336,3 +336,131 @@ a {
 
 /* -------------------------------- MODAL -------------------------------- */
 
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 8; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+
+.modal-content {
+    background-color: #f7e4e4;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 2px solid #8b0000;
+    width: 80%; 
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    color: #ffffff;
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    top: 222px;
+    right: 420px; 
+    cursor: pointer;
+    background-color: #8b0000;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center ;
+}
+
+.close:hover,
+.close:focus {
+    color: #8b0000;
+    background-color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+} 
+
+.modal-image img {
+    width: 200px;
+    height: auto;
+    border: 3px solid #8b0000;
+    padding: none;
+}
+
+
+.modal-text {
+    flex: 1;
+    margin-left: 20px;
+    font-family: "Lora", serif;
+
+}
+
+.modal-text h5 {
+    color: #8b0000;
+    font-family: "Lora", serif;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.modal-text p {
+    color: #8b0000;
+    margin: 1rem ;
+}
+
+
+.modal-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.add-to-cart {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-right: 20px;
+    flex-shrink: 0;
+    font-family: "Lora", serif;
+
+}
+
+.add-to-cart:hover {
+    background-color: #a52a2a;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+
+}
+
+.quantity-control button {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    height: 50px;
+    width: 50px;
+}
+
+.quantity-control input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #8b0000;
+    margin: 0 5px;
+    height: 46px;
+    width: 50px;
+    font-size: 16px;
+}
