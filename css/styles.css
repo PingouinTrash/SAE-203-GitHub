@@ -144,7 +144,7 @@ h1 {
 
 /* -------- Boutiques -------- */ 
 
-.liste-boutiques {
+.liste {
     background-color: #E7C3C3;
     color: #9f1010;
     font-family: "Lora", serif;
@@ -199,10 +199,18 @@ h3 {
     text-decoration: underline;
 }
 
-.liste-produits {
+.liste #produits {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+/* -------- Paniers -------- */
+
+#liste-panier {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
 }
 
 /* -------- Connexion -------- */

@@ -14,7 +14,7 @@ include_once("menu.php");
     </div>
 </section>
 
-<section class="liste-produits">
+<section id="liste-produits" class="liste">
     <?php
 
     $boutique_id = $_GET["param_id"];

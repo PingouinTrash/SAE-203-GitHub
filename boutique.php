@@ -10,9 +10,9 @@ include_once("acces_bdd.php");
     </div>
 </section>
 
-<section class="liste-boutiques">
+<section id="liste-boutiques" class="liste">
     
-    <div class="liste-boutiques">
+    <div>
         <?php
 
         $sql = "SELECT * FROM boutiques";
