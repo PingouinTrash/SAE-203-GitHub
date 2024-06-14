@@ -10,7 +10,7 @@ session_destroy();
 
 include_once("constantes.php");
 
-header("location: ".ROOT."/index.php");
+header("location: ".ROOT."index.php");
 exit();
 
 ?>

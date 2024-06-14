@@ -1,5 +1,5 @@
 <?php
-require_once("header.php");
+include_once("header.php");
 ?>
 
 <header>
@@ -9,15 +9,20 @@ require_once("header.php");
     </div>
     <nav class="menu">
         <ul>
-            <li><a href="<?php echo(ROOT);?>index.php">Accueil</a></li>
-            <li><a href="<?php echo(ROOT);?>boutique.php">Boutiques</a></li>
-            <!-- <li><a href="<?//php echo(ROOT);?>panier.php">Panier</a></li> -->
             <?php
                 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
-                    echo('<li><a href="'.ROOT.'/deconnexion.php">Déconnexion</a></li>');
+                    echo(
+                        '<li><a href="'.ROOT.'index.php">Accueil</a></li>
+                        <li><a href="'.ROOT.'boutique.php">Boutiques</a></li>
+                        <li><a href="'.ROOT.'deconnexion.php">Déconnexion</a></li>'
+                    );
                 }
                 else {
-                    echo('<li><a href="'.ROOT.'/connexion.php">Connexion</a></></li>');
+                    echo(
+                        '<li><a href="'.ROOT.'index.php">Accueil</a></li>
+                        <li><a href="'.ROOT.'boutique.php">Boutiques</a></li>
+                        <li><a href="'.ROOT.'connexion.php">Connexion</a></></li>'
+                    );
                 }
             ?>
         </ul>

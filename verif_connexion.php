@@ -1,5 +1,4 @@
 <?php
-
 include_once("header.php");
 include_once("acces_bdd.php");
 include_once("constantes.php");
@@ -9,27 +8,24 @@ $password = $_POST["mot_de_passe"];
 
 $result = verif_connexion($username, $password);
 
-set($_SESSION['loggedin']);
-set($_SESSION['utilisateur']);
-set($_SESSION['role']);
-
 if ($result == true){
     $_SESSION["utilisateur"] = $username;
     $_SESSION["loggedin"] = true;
     $_SESSION["role"] = $result["role"];
 
-    if ("admin" == $result["role"]){
+
+    if ("admin" == $_SESSION["role"]){
         header("Location: " . ROOT . "admin/index_admin.php");
         exit();
     }
-    elseif("gerant" == $result["role"]){
+    elseif("gerant" == $_SESSION["role"]){
         header("Location: " . ROOT . "gerant/index_gerant.php");
         exit();
     }
 }
 
 else{
-    $_SESSION["error"] = "Mauvais identifiant ou mot de passe";
+    $_SESSION["error"] = "Mauvais identifiant ou mot de passe !";
     header("Location: " . ROOT . "connexion.php");
     exit();
 }
@@ -39,7 +35,6 @@ function verif_connexion($username, $password){
     foreach ($login as $value){
         $password = md5($password);
         if (($value["username"] == $username) && ($value["password"] == $password)) {
-            return true;
             return $login[0];
         }
         else {
