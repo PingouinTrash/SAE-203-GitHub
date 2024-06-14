@@ -26,7 +26,7 @@ include_once("acces_bdd.php");
                             <img class='image' src='media/Boutique.jpg' alt='Boutique de " . $row["nom"] . "'>
                             <div class='boutique-desc'>
                                 <h2 class='titre-boutique'>" . $row["nom"] . "</h2>
-                                <h3>" . $row["numero_rue"] . " " . $row["nom_adresse"] . "</h3>
+                                <h3>" . $row["numero_rue"] . " " . $row["nom_adresse"] . ", " . $row["code_postal"] . " " . $row["ville"] . ", " . $row["pays"] . "</h3>
                             </div>
                         </div>
                     </a>"
