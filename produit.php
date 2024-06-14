@@ -2,11 +2,10 @@
 include_once("header.php");
 include_once("menu.php");
 ?>
-<script src="js/app.js"></script>
 
 <section>
     <div class="retour">
-        <a href="boutique.php">< Retour aux boutiques</a>
+        <a href="<?php echo(ROOT);?>boutique.php">< Retour aux boutiques</a>
     </div>
 
     <div class="nom-de-page">
@@ -52,14 +51,14 @@ include_once("menu.php");
             <h5>Bonbon acide</h5>
             <p class="description">Bonbon acide délicieux</p>
             <p class="prix">0,15 €/pièce</p>
-            <div class="modal-actions">
+            <!-- <div class="modal-actions">
                 <button class="add-to-cart">Ajouter au panier</button>
                 <div class="quantity-control">
                     <button class="decrease">-</button>
                     <input type="number" value="1" min="1">
                     <button class="increase">+</button>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

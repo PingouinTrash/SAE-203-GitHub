@@ -28,7 +28,7 @@ catch (Exception $ex) {
 function query($sql){
     global $bdd;
     $stmt = $bdd->query($sql);
-    return $stmt;
+    return $stmt->fetchAll();
 }
 
 ?>
