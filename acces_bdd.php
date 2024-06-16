@@ -31,4 +31,5 @@ function query($sql){
     return $stmt->fetchAll();
 }
 
+
 ?>

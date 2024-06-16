@@ -1,6 +1,9 @@
 <?php
 include_once("../constantes.php");
 include_once("../menu.php");
+include_once("../acces_bdd.php");
+
+
 ?>
 
 <section>
@@ -9,51 +12,39 @@ include_once("../menu.php");
     </div>
 </section>
 
-<section>
-    <div id="ajout-boutique-admin">
-        <div>
-            <h3>Ajouter une boutique</h3>
-        </div>
-        <form action="" method="post">
-            <div id="labels-ajout">
-                <div>
-                    <label for="nom">Nom de la boutique : </label>
-                    </br>
-                    <label for="numero_rue">Numéro de rue : </label>
-                    </br>
-                    <label for="nom_adresse">Nom de l'adresse : </label>
-                    </br>
-                    <label for="code_postal">Code postal : </label>
-                    </br>
-                    <label for="ville">Ville : </label>
-                    </br>
-                    <label for="pays">Pays : </label>
-                </div>
-                <div>
-                    <input type="text" id="nom" name="nom">
-                    </br>
-                    <input type="text" id="numero_rue" name="numero_rue">
-                    </br>
-                    <input type="text" id="nom_adresse" name="nom_adresse">
-                    </br>
-                    <input type="text" id="code_postal" name="code_postal">
-                    </br>
-                    <input type="text" id="ville" name="ville">
-                    </br>
-                    <input type="text" id="pays" name="pays">
-                </div>
-            </div>
-            <button type="button">Ajouter une boutique</button>
-        </form>
-    </div>
-</section>
+<form method="POST" action="crea-boutique.php">
+    <label for="nom-boutique">Nom de la boutique :</label>
+    <input type="text"id="nom-boutique" name="nom-boutique"placeholder="Nom Boutique ..." require><br>
+
+    <label for="gerant">id du gérant : </label>
+    <input type="number"id="gerant" name="gerant"placeholder="gérant id ..." require><br>
+
+    <label for="num-rue">Numéro de la rue : </label>
+    <input type="number"id="num-rue" name="num-rue"placeholder="Numéro rue ..." require><br>
+
+    <label for="nom-adresse">Nom de l'adresse :</label>
+    <input type="text"id="nom-adresse" name="nom-adresse"placeholder="Nom adresse ..."require><br>
+
+    <label for="code-postal">code postal :</label>
+    <input type="number"id="code-postal" name="code-postal"placeholder="code postal ..."require><br>
+
+    <label for="ville">ville :</label>
+    <input type="text"id="ville" name="ville"placeholder="ville ..."require><br>
+
+    <label for="pays">Pays</label>
+    <input type="text"id="pays" name="pays"placeholder="Pays ..."require><br>
+
+    <input type="submit" value='Créé la boutique' name='Boutique-créé'>
+</form>
 
 <section id="liste-boutiques" class="liste">
     <div>
         <?php
+        // Requête pour récupérer les boutiques existantes
+        $resultat = $bdd->query("SELECT * FROM boutiques");
 
         if ($resultat && $resultat->rowCount() > 0) {
-            while($row = $resultat->fetch(PDO::FETCH_ASSOC)) {
+            while ($row = $resultat->fetch(PDO::FETCH_ASSOC)) {
                 echo (
                     "<a href='produit.php?param_id=" . $row["id"] . "'>
                         <div class='card boutique'>
@@ -69,16 +60,13 @@ include_once("../menu.php");
                     </a>"
                 );
             }
-        } 
-
-        else {
+        } else {
             echo "0 résultats";
         }
-
         ?>
     </div>
 </section>
 
 <?php
-include_once(ROOT. "footer.php");
+include_once(ROOT . "footer.php");
 ?>
