@@ -13,9 +13,17 @@ include_once("header.php");
                 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
                     echo(
                         '<li><a href="'.ROOT.'index.php">Accueil</a></li>
-                        <li><a href="'.ROOT.'boutique.php">Boutiques</a></li>
-                        <li><a href="'.ROOT.'deconnexion.php">Déconnexion</a></li>'
+                        <li><a href="'.ROOT.'boutique.php">Boutiques</a></li>'
                     );
+
+                    if($_SESSION["role"] == "admin") {
+                        echo('<li><a href="'.ROOT.'admin/index_admin.php">Gestion</a></li>');
+                    }
+                    elseif($_SESSION["role"] == "gerant") {
+                        echo('<li><a href="'.ROOT.'gerant/index_gerant.php">Gestion</a></li>');
+                    }
+
+                    echo('<li><a href="'.ROOT.'deconnexion.php">Déconnexion</a></li>');
                 }
                 else {
                     echo(
