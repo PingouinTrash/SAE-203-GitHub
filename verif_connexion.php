@@ -30,32 +30,19 @@ else{
     exit();
 }
 
-function verif_connexion($username, $password){
+function verif_connexion($_username, $_password){
 
-    // $test = query("SELECT username, password, role, id FROM utilisateurs");
-    
-    // print_r('<pre>');
-    // print_r($test);
-    // print_r('</pre>');
+    $_password = md5($_password);
+    $request = "SELECT * FROM utilisateurs WHERE utilisateurs.username LIKE '$_username' AND password LIKE '$_password'";
+    $logins = query($request);
+    $login = $logins[0];
 
-    // $login = query("SELECT * FROM utilisateurs WHERE username LIKE $username AND password LIKE $password");
-
-    // if (($login["username"] == $username) && ($login["password"] == $password)) {
-    //     return $login[0];
-    // }
-    // else {
-    //     return false;
-    // }
-
-    $login = query("SELECT username, password, role, id FROM utilisateurs");
-    $password = md5($password);
-
-    foreach ($login as $value){
-        if (($value["username"] == $username) && ($value["password"] == $password)) {
-            return $login[0];
-        }
+    if (($login["username"] == $_username) && ($login["password"] == $_password)) {
+        return $login;
     }
-    return false;
+    else {
+        return false;
+    }
 
 }
 
