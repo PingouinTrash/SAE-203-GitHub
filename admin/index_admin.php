@@ -2,8 +2,6 @@
 include_once("../constantes.php");
 include_once("../menu.php");
 include_once("../acces_bdd.php");
-
-
 ?>
 
 <section>
@@ -14,25 +12,25 @@ include_once("../acces_bdd.php");
 
 <form method="POST" action="crea-boutique.php">
     <label for="nom-boutique">Nom de la boutique :</label>
-    <input type="text"id="nom-boutique" name="nom-boutique"placeholder="Nom Boutique ..." require><br>
+    <input type="text" id="nom-boutique" name="nom-boutique" placeholder="Nom Boutique ..." require><br>
 
     <label for="gerant">id du gérant : </label>
-    <input type="number"id="gerant" name="gerant"placeholder="gérant id ..." require><br>
+    <input type="number" id="gerant" name="gerant" placeholder="gérant id ..." require><br>
 
     <label for="num-rue">Numéro de la rue : </label>
-    <input type="number"id="num-rue" name="num-rue"placeholder="Numéro rue ..." require><br>
+    <input type="number" id="num-rue" name="num-rue" placeholder="Numéro rue ..." require><br>
 
     <label for="nom-adresse">Nom de l'adresse :</label>
-    <input type="text"id="nom-adresse" name="nom-adresse"placeholder="Nom adresse ..."require><br>
+    <input type="text" id="nom-adresse" name="nom-adresse" placeholder="Nom adresse ..." require><br>
 
     <label for="code-postal">code postal :</label>
-    <input type="number"id="code-postal" name="code-postal"placeholder="code postal ..."require><br>
+    <input type="number" id="code-postal" name="code-postal" placeholder="code postal ..." require><br>
 
     <label for="ville">ville :</label>
-    <input type="text"id="ville" name="ville"placeholder="ville ..."require><br>
+    <input type="text" id="ville" name="ville" placeholder="ville ..." require><br>
 
     <label for="pays">Pays</label>
-    <input type="text"id="pays" name="pays"placeholder="Pays ..."require><br>
+    <input type="text" id="pays" name="pays" placeholder="Pays ..." require><br>
 
     <input type="submit" value='Créé la boutique' name='Boutique-créé'>
 </form>
