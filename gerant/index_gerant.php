@@ -24,32 +24,23 @@ else {}
         $request_shops = "SELECT boutiques.id FROM boutiques JOIN utilisateurs ON boutiques.utilisateur_id = utilisateurs.id WHERE boutiques.utilisateur_id = $manager_id";
         $shops = query($request_shops);
 
-        $length = count($shops);
-
         foreach($shops as $shop) {
             $shop_id = $shop['id'];
-            $request_stocks = "SELECT * FROM stocks WHERE stocks.boutique_id = $shop_id";
+            $request_stocks = "SELECT * FROM stocks JOIN confiseries ON stocks.confiserie_id = confiseries.id WHERE stocks.boutique_id = $shop_id";
             $stocks = query($request_stocks);
-
-            foreach($stocks as $stock) {
-                $stock_id = $stock['confiserie_id'];
-                $request_candies = "SELECT * FROM confiseries WHERE confiseries.id = $stock_id";
-                $candies = query($request_candies);
-
-                print_r('<pre>');
-                print_r($candies);
-                print_r('</pre>');
     
+            foreach($stocks as $stock){
                 echo (
                     "<div class='card boutique'>
                         <img class='image' src='../media/bonbon.jpg' alt='Bonbon'>
                         <div class='boutique-desc'>
-                            <h2 class='titre-boutique'>" . $candies[0]["nom"] . "</h2>
-                            <h3>" . $candies[0]["description"] . "</h3>
+                            <h2 class='titre-boutique'>" . $stock["nom"] . "</h2>
+                            <h3>" . $stock["quantite"] . "</h3>
                         </div>
                     </div>"
                 );
             }
+            
         }
 
         ?>
