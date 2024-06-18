@@ -1,5 +1,4 @@
 <?php
-include_once("../header.php");
 include_once("../menu.php");
 
 if($_SESSION["role"] != "gerant"){
@@ -20,21 +19,38 @@ else {}
     <div>
         <?php
 
-        $manager_id = $_POST["identifiant"];
+        $manager_id = 2;
         
-        $request_shops = "SELECT * FROM boutiques JOIN utilisateurs ON boutiques.utilisateurs_id = utilisateurs.id WHERE boutiques.utilisateurs_id = $manager_id";
+        $request_shops = "SELECT boutiques.id FROM boutiques JOIN utilisateurs ON boutiques.utilisateur_id = utilisateurs.id WHERE boutiques.utilisateur_id = $manager_id";
         $shops = query($request_shops);
 
-        print_r('<pre>');
-        print_r($shops);
-        print_r('</pre>');
+        $length = count($shops);
 
-        $request_stocks = "SELECT * FROM confiseries JOIN stocks ON confiseries.id = stocks.confiserie_id WHERE stocks.boutique_id = $boutique_id";
-        $stocks = query($request_stocks);
+        foreach($shops as $shop) {
+            $shop_id = $shop['id'];
+            $request_stocks = "SELECT * FROM stocks WHERE stocks.boutique_id = $shop_id";
+            $stocks = query($request_stocks);
 
-        print_r('<pre>');
-        print_r($stocks);
-        print_r('</pre>');
+            foreach($stocks as $stock) {
+                $stock_id = $stock['confiserie_id'];
+                $request_candies = "SELECT * FROM confiseries WHERE confiseries.id = $stock_id";
+                $candies = query($request_candies);
+
+                print_r('<pre>');
+                print_r($candies);
+                print_r('</pre>');
+    
+                echo (
+                    "<div class='card boutique'>
+                        <img class='image' src='../media/bonbon.jpg' alt='Bonbon'>
+                        <div class='boutique-desc'>
+                            <h2 class='titre-boutique'>" . $candies[0]["nom"] . "</h2>
+                            <h3>" . $candies[0]["description"] . "</h3>
+                        </div>
+                    </div>"
+                );
+            }
+        }
 
         ?>
     </div>
