@@ -3,7 +3,7 @@ include_once("../constantes.php");
 include_once("../menu.php");
 include_once("../acces_bdd.php");
 
-if($_SESSION["loggedin"] = false Or $_SESSION["role"] != "admin"){
+if($_SESSION["role"] != "admin"){
     session_destroy();
     header("location: ".ROOT."index.php");
     exit();
