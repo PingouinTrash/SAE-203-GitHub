@@ -6,7 +6,6 @@ if($_SESSION["role"] != "gerant"){
     header("location: ".ROOT."index.php");
     exit();
 }
-
 ?>
 
 <section>

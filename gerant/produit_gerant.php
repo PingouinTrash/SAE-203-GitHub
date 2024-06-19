@@ -19,6 +19,33 @@ else {}
     </div>
 </section>
 
+<section class="liste">
+    <form method="post">
+        <label for="confiserie">Confiserie :</label>
+        <select name="confiseir">
+            <option value="">--Sélectionnez une confiserie--</option>
+            <?php
+
+            $request_confiseries = "SELECT nom FROM confiseries";
+            $confiseries = query($request_confiseries);
+
+            foreach($confiseries as $confiserie) {
+                $confiserie = $confiserie[0];
+                echo("<option value='$confiserie'>$confiserie</option>");
+            }
+
+            ?>
+        </select>
+        <br>
+
+        <label for="quantite">Quantité :</label>
+        <input type="number" name="quantite" value="0" min="0" required><br>
+
+        <input type="hidden" name="actiontype" value="ajout_confiserie_gerant">
+        <button type="submit" class="bouton fond-clair"><h4>Ajouter une confiserie</h4></button>
+    </form>
+</section>
+
 <section id="liste-boutiques" class="liste">
     <div>
         <?php
@@ -26,8 +53,8 @@ else {}
         $manager_id = $_SESSION["id"];
 
         if(isset($_POST['candy_id'])){
-            $confiserie_id = $_POST['candy_id'];
-            $boutique_id = $_POST['shop_id'];
+            $confiserie_id = $_POST['confiserie_id'];
+            $boutique_id = $_POST['boutique_id'];
             $quantite_modif = $_POST['quantite_modif'];
 
             $request_update = "UPDATE stocks SET quantite = $quantite_modif WHERE confiserie_id = $confiserie_id AND boutique_id = $boutique_id";
@@ -47,8 +74,8 @@ else {}
             foreach($stocks as $stock){
                 echo (
                     "<form method='POST' type='action'>
-                        <input type='hidden' name='shop_id' value='$shop_id'>
-                        <input type='hidden' name='candy_id' value=" . $stock["confiserie_id"] . ">
+                        <input type='hidden' name='boutique_id' value='$shop_id'>
+                        <input type='hidden' name='confiserie_id' value=" . $stock["confiserie_id"] . ">
                         <div class='card no-hver horizontal'>
                             <img class='image' src='../media/bonbon.jpg' alt='Bonbon'>
                             <div class='vertical desc'>
@@ -59,7 +86,7 @@ else {}
                             <div class='vertical desc modif'>
                                 <div class='modif-quantites'>
                                     <label for='modif-quantite'>Modifier quantité :</label>
-                                    <input type='number' name='quantite_modif' value=" . $stock["quantite"] . " min='0'>
+                                    <input type='number' name='quantite_modif' value=" . $stock["quantite"] . " min='0' required>
                                 </div>
                                 <button type='submit' class='bouton fond-sombre'><h4>Mettre à jour les quantités</h4></button>
                             </div>
