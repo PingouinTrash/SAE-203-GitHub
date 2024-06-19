@@ -2,6 +2,7 @@
 include_once("../constantes.php");
 include_once("../menu.php");
 include_once("../acces_bdd.php");
+include_once("crea_boutique.php");
 
 if($_SESSION["role"] != "admin"){
     session_destroy();

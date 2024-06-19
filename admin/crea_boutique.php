@@ -1,5 +1,6 @@
 <?php
 include_once('../acces_bdd.php');
+include_once('index_admin.php');
 
 if(isset($_POST['Boutique-créé'])){
     $nomBoutique = $_POST['nom-boutique'];
@@ -23,7 +24,7 @@ if(isset($_POST['Boutique-créé'])){
                 "pays" => $Pays
             )
         );
-        echo "Boutique créée avec succès.";
+        header("Location: " . $_SERVER["index_admin.php"]);
 
 }
 ?>
