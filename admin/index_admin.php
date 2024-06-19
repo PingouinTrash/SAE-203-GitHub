@@ -2,51 +2,79 @@
 include_once("../constantes.php");
 include_once("../menu.php");
 include_once("../acces_bdd.php");
-include_once("crea_boutique.php");
 
-if($_SESSION["role"] != "admin"){
+if ($_SESSION["role"] != "admin") {
     session_destroy();
-    header("location: ".ROOT."index.php");
+    header("location: " . ROOT . "index.php");
     exit();
 }
-else {}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nomBoutique = $_POST['nom-boutique'];
+    $gerant = $_POST['gerant'];
+    $numRue = $_POST['num-rue'];
+    $nomRue = $_POST['nom-adresse'];
+    $codePostal = $_POST['code-postal'];
+    $ville = $_POST['ville'];
+    $pays = $_POST['pays'];
+
+    $stmt = $bdd->prepare("INSERT INTO boutiques (id, nom, utilisateur_id, numero_rue, nom_adresse, code_postal, ville, pays) VALUES (NULL, :nom, :utilisateur_id, :numero_rue, :nom_adresse, :code_postal, :ville, :pays)");
+    $stmt->execute([
+        "nom" => $nomBoutique,
+        "utilisateur_id" => $gerant,
+        "numero_rue" => $numRue,
+        "nom_adresse" => $nomRue,
+        "code_postal" => $codePostal,
+        "ville" => $ville,
+        "pays" => $pays
+    ]);
+
+    header("Location: index_admin.php");
+    exit();
+}
 ?>
 
-<section>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestion des boutiques</title>
+</head>
+<body>
+  <section>
     <div class="nom-de-page">
         <h2>Gestion des boutiques</h2>
     </div>
-</section>
+  </section>
 
-<form method="POST" action="crea-boutique.php">
+  <form method="POST" action="crea-boutique.php">
     <label for="nom-boutique">Nom de la boutique :</label>
-    <input type="text" id="nom-boutique" name="nom-boutique" placeholder="Nom Boutique ..." require><br>
+    <input type="text" id="nom-boutique" name="nom-boutique" placeholder="Nom Boutique ..." required><br>
 
-    <label for="gerant">id du gérant : </label>
-    <input type="number" id="gerant" name="gerant" placeholder="gérant id ..." require><br>
+    <label for="gerant">id du gérant :</label>
+    <input type="number" id="gerant" name="gerant" placeholder="gérant id ..." required><br>
 
-    <label for="num-rue">Numéro de la rue : </label>
-    <input type="number" id="num-rue" name="num-rue" placeholder="Numéro rue ..." require><br>
+    <label for="num-rue">Numéro de la rue :</label>
+    <input type="number" id="num-rue" name="num-rue" placeholder="Numéro rue ..." required><br>
 
     <label for="nom-adresse">Nom de l'adresse :</label>
-    <input type="text" id="nom-adresse" name="nom-adresse" placeholder="Nom adresse ..." require><br>
+    <input type="text" id="nom-adresse" name="nom-adresse" placeholder="Nom adresse ..." required><br>
 
     <label for="code-postal">code postal :</label>
-    <input type="number" id="code-postal" name="code-postal" placeholder="code postal ..." require><br>
+    <input type="number" id="code-postal" name="code-postal" placeholder="code postal ..." required><br>
 
     <label for="ville">ville :</label>
-    <input type="text" id="ville" name="ville" placeholder="ville ..." require><br>
+    <input type="text" id="ville" name="ville" placeholder="ville ..." required><br>
 
-    <label for="pays">Pays</label>
-    <input type="text" id="pays" name="pays" placeholder="Pays ..." require><br>
+    <label for="pays">Pays :</label>
+    <input type="text" id="pays" name="pays" placeholder="Pays ..." required><br>
 
-    <input type="submit" value='Créé la boutique' name='Boutique-créé'>
-</form>
+    <input type="submit" value="Créer la boutique" name="Boutique-créé">
+  </form>
 
-<section id="liste-boutiques" class="liste">
+  <section id="liste-boutiques" class="liste">
     <div>
         <?php
-        // Requête pour récupérer les boutiques existantes
         $resultat = $bdd->query("SELECT * FROM boutiques");
 
         if ($resultat && $resultat->rowCount() > 0) {
@@ -71,8 +99,6 @@ else {}
         }
         ?>
     </div>
-</section>
+  </section>
 
-<?php
-include_once(ROOT . "footer.php");
-?>
+  <?php include_once(ROOT . "footer.php"); ?>
