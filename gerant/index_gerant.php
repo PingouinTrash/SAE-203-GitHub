@@ -33,10 +33,12 @@ else {}
                 echo (
                     "<div class='card boutique'>
                         <img class='image' src='../media/bonbon.jpg' alt='Bonbon'>
-                        <div class='boutique-desc'>
-                            <h2 class='titre-boutique'>" . $stock["nom"] . "</h2>
-                            <h3>" . $stock["quantite"] . "</h3>
-                        </div>
+                        <form method='post'>
+                            <h2 class='titre-boutique' name='nom_confiserie'>" . $stock["nom"] . "</h2>
+                            <h4 name='quantite_actuelle'>Quantité actuelle : " . $stock["quantite"] . "</h4>
+                            <label for='modif-quantite'>Modifier quantités :</label>
+                            <input type='number' name='quantite_modif'>
+                        </form>
                     </div>"
                 );
             }

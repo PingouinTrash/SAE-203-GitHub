@@ -14,8 +14,8 @@ include_once("menu.php");
     ?>
 
     <div class="inputs">
-      <input type="ID" placeholder="Identifiant" id="identifiant" name="identifiant"/>
-      <input type="password" placeholder="Mot de passe" id="mot_de_passe" name="mot_de_passe">
+      <input type="ID" placeholder="Identifiant" name="identifiant">
+      <input type="password" placeholder="Mot de passe" name="mot_de_passe">
     </div>
      
     <div id="bouton-connexion">
