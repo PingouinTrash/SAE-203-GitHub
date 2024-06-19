@@ -23,7 +23,7 @@ include_once("menu.php");
     if ($resultat && count($resultat) > 0) {
         foreach($resultat as $row) {
             echo (
-            "<button type='button' class='card produit openModalBtn' 
+            "<button type='button' class='card hover produit openModalBtn' 
                 data-nom='" . htmlspecialchars($row["nom"], ENT_QUOTES, 'UTF-8') . "'
                 data-description='" . htmlspecialchars($row["description"], ENT_QUOTES, 'UTF-8') . "'
                 data-prix='" . htmlspecialchars($row["prix"], ENT_QUOTES, 'UTF-8') . "'

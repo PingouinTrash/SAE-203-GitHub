@@ -9,28 +9,36 @@ if ($_SESSION["role"] != "admin") {
     exit();
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nomBoutique = $_POST['nom-boutique'];
-    $gerant = $_POST['gerant'];
-    $numRue = $_POST['num-rue'];
-    $nomRue = $_POST['nom-adresse'];
-    $codePostal = $_POST['code-postal'];
-    $ville = $_POST['ville'];
-    $pays = $_POST['pays'];
+if (isset($_POST["actiontype"])) {
 
-    $stmt = $bdd->prepare("INSERT INTO boutiques (id, nom, utilisateur_id, numero_rue, nom_adresse, code_postal, ville, pays) VALUES (NULL, :nom, :utilisateur_id, :numero_rue, :nom_adresse, :code_postal, :ville, :pays)");
-    $stmt->execute([
-        "nom" => $nomBoutique,
-        "utilisateur_id" => $gerant,
-        "numero_rue" => $numRue,
-        "nom_adresse" => $nomRue,
-        "code_postal" => $codePostal,
-        "ville" => $ville,
-        "pays" => $pays
-    ]);
+    if($_POST["actiontype"] == "ajout_boutique"){
+        $nomBoutique = $_POST['nom-boutique'];
+        $gerant = $_POST['gerant'];
+        $numRue = $_POST['num-rue'];
+        $nomRue = $_POST['nom-adresse'];
+        $codePostal = $_POST['code-postal'];
+        $ville = $_POST['ville'];
+        $pays = $_POST['pays'];
 
-    header("Location: index_admin.php");
-    exit();
+        $stmt = $bdd->prepare("INSERT INTO boutiques (id, nom, utilisateur_id, numero_rue, nom_adresse, code_postal, ville, pays) VALUES (NULL, :nom, :utilisateur_id, :numero_rue, :nom_adresse, :code_postal, :ville, :pays)");
+        $stmt->execute([
+            "nom" => $nomBoutique,
+            "utilisateur_id" => $gerant,
+            "numero_rue" => $numRue,
+            "nom_adresse" => $nomRue,
+            "code_postal" => $codePostal,
+            "ville" => $ville,
+            "pays" => $pays
+        ]);
+
+        header("Location: index_admin.php");
+        exit();
+    }
+
+    elseif($_POST["actiontype"] == "suppression_boutique"){
+        header("Location: index_admin.php");
+        exit();
+    }
 }
 ?>
 
@@ -47,7 +55,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </section>
 
-  <form method="POST" action="crea-boutique.php">
+  <form method="post">
+    <input type="hidden" name="actiontype" value="ajout_boutique">
+
     <label for="nom-boutique">Nom de la boutique :</label>
     <input type="text" id="nom-boutique" name="nom-boutique" placeholder="Nom Boutique ..." required><br>
 
@@ -80,18 +90,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($resultat && $resultat->rowCount() > 0) {
             while ($row = $resultat->fetch(PDO::FETCH_ASSOC)) {
                 echo (
-                    "<a href='produit.php?param_id=" . $row["id"] . "'>
-                        <div class='card boutique'>
-                            <img class='image' src='media/Boutique.jpg' alt='Boutique de " . $row["nom"] . "'>
-                            <div class='boutique-desc'>
+                    "
+                        <div class='card horizontal'>
+                            <img class='image' src='../media/Boutique.jpg' alt='Boutique de " . $row["nom"] . "'>
+                            <div class='desc'>
                                 <h2 class='titre-boutique'>" . $row["nom"] . "</h2>
                                 <h3>" . $row["numero_rue"] . " " . $row["nom_adresse"] . ", " . $row["code_postal"] . " " . $row["ville"] . ", " . $row["pays"] . "</h3>
                             </div>
-                            <form action='' method='post'>
+                            <form method='post'>
+                                <input type='hidden' name='actiontype' value='suppression_boutique'>
                                 <button type='button'>Supprimer la boutique</button>
                             </form>
-                        </div>
-                    </a>"
+                        </div>"
                 );
             }
         } else {
@@ -101,4 +111,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
   </section>
 
-  <?php include_once(ROOT . "footer.php"); ?>
+  <?php
+  include_once(ROOT . "footer.php");
+  ?>

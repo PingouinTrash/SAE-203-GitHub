@@ -22,9 +22,9 @@ include_once("acces_bdd.php");
             foreach($resultat as $row) {
                 echo (
                     "<a href='produit.php?param_id=" . $row["id"] . "'>
-                        <div class='card boutique'>
+                        <div class='card hover horizontal'>
                             <img class='image' src='media/Boutique.jpg' alt='Boutique de " . $row["nom"] . "'>
-                            <div class='boutique-desc'>
+                            <div class='desc'>
                                 <h2 class='titre-boutique'>" . $row["nom"] . "</h2>
                                 <h3>" . $row["numero_rue"] . " " . $row["nom_adresse"] . ", " . $row["code_postal"] . " " . $row["ville"] . ", " . $row["pays"] . "</h3>
                             </div>

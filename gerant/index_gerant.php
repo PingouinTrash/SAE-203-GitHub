@@ -6,7 +6,7 @@ if($_SESSION["role"] != "gerant"){
     header("location: ".ROOT."index.php");
     exit();
 }
-else {}
+
 ?>
 
 <section>
@@ -19,30 +19,23 @@ else {}
     <div>
         <?php
 
-        $manager_id = 2;
-        
-        $request_shops = "SELECT boutiques.id FROM boutiques JOIN utilisateurs ON boutiques.utilisateur_id = utilisateurs.id WHERE boutiques.utilisateur_id = $manager_id";
+        $manager_id = $_SESSION["id"];
+
+        $request_shops = "SELECT * FROM boutiques JOIN utilisateurs ON boutiques.utilisateur_id = utilisateurs.id WHERE boutiques.utilisateur_id = $manager_id";
         $shops = query($request_shops);
 
         foreach($shops as $shop) {
-            $shop_id = $shop['id'];
-            $request_stocks = "SELECT * FROM stocks JOIN confiseries ON stocks.confiserie_id = confiseries.id WHERE stocks.boutique_id = $shop_id";
-            $stocks = query($request_stocks);
-    
-            foreach($stocks as $stock){
-                echo (
-                    "<div class='card boutique'>
-                        <img class='image' src='../media/bonbon.jpg' alt='Bonbon'>
-                        <form method='post'>
-                            <h2 class='titre-boutique' name='nom_confiserie'>" . $stock["nom"] . "</h2>
-                            <h4 name='quantite_actuelle'>Quantité actuelle : " . $stock["quantite"] . "</h4>
-                            <label for='modif-quantite'>Modifier quantités :</label>
-                            <input type='number' name='quantite_modif'>
-                        </form>
-                    </div>"
-                );
-            }
-            
+            echo(
+                "<a href='produit_gerant.php'>
+                    <div class='card hover horizontal'>
+                        <img class='image' src='../media/Boutique.jpg' alt='Boutique de " . $shop["nom"] . "'>
+                        <div class='desc'>
+                            <h2 class='titre-boutique'>" . $shop["nom"] . "</h2>
+                            <h3>" . $shop["numero_rue"] . " " . $shop["nom_adresse"] . ", " . $shop["code_postal"] . " " . $shop["ville"] . ", " . $shop["pays"] . "</h3>
+                        </div>
+                    </div>
+                </a>"
+            );
         }
 
         ?>

@@ -12,6 +12,7 @@ if ($result == true){
     $_SESSION["utilisateur"] = $username;
     $_SESSION["loggedin"] = true;
     $_SESSION["role"] = $result["role"];
+    $_SESSION["id"] = $result["id"];
 
     if ("admin" == $_SESSION["role"]){
         header("Location: " . ROOT . "admin/index_admin.php");

@@ -123,15 +123,6 @@ body {
     padding-left: 1rem;
 }
 
-h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 5.5rem;
-    color: #9F1010;
-    font-family: "Tangerine";
-    font-weight: 900;
-}
-
 .accueil a {
     font-family: "Lora", serif;
 }
@@ -157,19 +148,6 @@ h1 {
     margin-left: 1rem;
 }
 
-h2 {
-    font-size: 4rem;
-    font-family: "Tangerine";
-    font-weight: 900;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-h3 {
-    font-size: 1.5rem;
-    font-family: "Lora", serif;
-}
-
 /* -------- Produits -------- */
 
 .nom-de-page {
@@ -181,10 +159,6 @@ h3 {
     background-color: #E7C3C3;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
-}
-
-.titre-boutique {
-    margin-top: 2rem;
 }
 
 .retour {
@@ -267,7 +241,6 @@ h3 {
 }
 
 #bouton-boutique {
-    padding: 0.1rem;
     margin: 1rem;
     margin-left: 30vw;
     margin-right: 30vw;
@@ -278,9 +251,7 @@ h3 {
 }
 
 #bouton-connexion button.bouton {
-    padding: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1rem;
 }
 
 .bouton:hover {
@@ -310,7 +281,43 @@ a {
     text-decoration: none;
 }
 
-/* -------- Inputs -------- */
+/* -------- Titres -------- */
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 5.5rem;
+    color: #9F1010;
+    font-family: "Tangerine";
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 4rem;
+    font-family: "Tangerine";
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-family: "Lora", serif;
+}
+
+h4 {
+    padding: 0;
+    margin: 0;
+}
+
+.titre-boutique {
+    margin-top: 2rem;
+}
+
+.info-title {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
 
 /* -------- Cards -------- */
 
@@ -322,14 +329,34 @@ a {
     background-color: #9F1010;
 }
 
-.card:hover {
+.hover:hover {
     color: #9F1010;
     background-color: #FFFFFF;
     cursor: pointer;
 }
 
-.boutique {
+.hover:hover .image {
+    border: 0.2rem solid #9F1010;
+}
+
+.horizontal {
     display: flex;
+    flex-direction: row;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.desc {
+    justify-content: space-evenly;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.modif {
+    align-self: center;
 }
 
 .image {
@@ -337,10 +364,6 @@ a {
     width: 12rem;
     height: 10rem;
     border: 0.2rem solid #FFFFFF;
-}
-
-.card:hover .image {
-    border: 0.2rem solid #9F1010;
 }
 
 /* -------------------------------- MODALE -------------------------------- */
@@ -362,7 +385,7 @@ a {
 .modal-content {
     background-color: #E7C3C3;
     margin: 15% auto; 
-    padding: 20px;
+    padding: 1.5rem;
     border: 0.2rem solid #9F1010;
     width: 80%; 
     max-width: 600px;
@@ -374,25 +397,27 @@ a {
 }
 
 .close {
-    color: #ffffff;
     float: right;
-    font-size: 50px;
-    font-weight: bold;
     position: absolute;
-    top: 222px;
-    right: 420px; 
-    cursor: pointer;
-    background-color: #9F1010;
-    width: 55px;
-    height: 55px;
     display: flex;
     justify-content: center ;
+    font-size: 50px;
+    font-weight: bold;
+    top: 9.75rem;
+    right: 12.05rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #9F1010;
+    border: 0.2rem solid #9F1010;
 }
 
 .close:hover,
 .close:focus {
     color: #9F1010;
     background-color: #ffffff;
+    border: 0.2rem solid #9F1010;
     text-decoration: none;
     cursor: pointer;
 } 
@@ -421,7 +446,6 @@ a {
 
 .modal-text p {
     color: #9F1010;
-    margin: 1rem ;
 }
 
 
