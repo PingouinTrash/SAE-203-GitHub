@@ -21,12 +21,12 @@ else {}
 
 <section class="liste">
     <form method="post">
-        <label for="confiserie">Confiserie :</label>
-        <select name="confiseir">
+        <label for="nom_confiserie">Confiserie :</label>
+        <select name="nom_confiserie">
             <option value="">--Sélectionnez une confiserie--</option>
             <?php
 
-            $request_confiseries = "SELECT nom FROM confiseries";
+            $request_confiseries = "SELECT nom FROM confiseries where confiseries.id not in (select stocks.confiserie_id from stocks where stocks.boutique_id= 2 )";
             $confiseries = query($request_confiseries);
 
             foreach($confiseries as $confiserie) {
@@ -38,8 +38,8 @@ else {}
         </select>
         <br>
 
-        <label for="quantite">Quantité :</label>
-        <input type="number" name="quantite" value="0" min="0" required><br>
+        <label for="quantite_ajoutee">Quantité :</label>
+        <input type="number" name="quantite_ajoutee" value="0" min="0" required><br>
 
         <input type="hidden" name="actiontype" value="ajout_confiserie_gerant">
         <button type="submit" class="bouton fond-clair"><h4>Ajouter une confiserie</h4></button>
@@ -51,6 +51,28 @@ else {}
         <?php
 
         $manager_id = $_SESSION["id"];
+        $shop_id = $_GET["boutique_id"];
+
+        if (isset($_POST["actiontype"])) {
+
+            if($_POST["actiontype"] == "ajout_confiserie_gerant"){
+                $nom_confiserie = $_POST['nom_confiserie'];
+                $request_confiserie_id = "SELECT id FROM confiseries WHERE nom LIKE '$nom_confiserie'";
+                $confiserie_id = query($request_confiserie_id);
+
+                $quantite = $_POST['quantite_ajoutee'];
+
+                $stmt = $bdd->prepare("INSERT INTO stocks(quantite, date_de_modification, boutique_id, confiserie_id) VALUES (:quantite, :date_de_modification, :boutique_id, :confiserie_id)");
+                $stmt->execute([
+                    "quantite" => $quantite,
+                    "date_de_modification" => date("Y-m-d"),
+                    "boutique_id" => $shop_id,
+                    "confiserie_id" => $confiserie_id[0][0]
+                ]);
+            }
+
+            else{}
+        }
 
         if(isset($_POST['candy_id'])){
             $confiserie_id = $_POST['confiserie_id'];
@@ -62,12 +84,12 @@ else {}
         }
         elseif(!isset($_POST['candy_id'])){}
 
-        $request_shops = "SELECT boutiques.id, boutiques.nom FROM boutiques JOIN utilisateurs ON boutiques.utilisateur_id = utilisateurs.id WHERE boutiques.utilisateur_id = $manager_id";
-        $shops = query($request_shops);
+        // $request_shops = "SELECT boutiques.id, boutiques.nom FROM boutiques JOIN utilisateurs ON boutiques.utilisateur_id = utilisateurs.id WHERE boutiques.utilisateur_id = $manager_id";
+        // $shops = query($request_shops);
 
-        foreach($shops as $shop) {
+        // foreach($shops as $shop) {
 
-            $shop_id = $shop['id'];
+            // $shop_id = $shop['id'];
             $request_stocks = "SELECT * FROM stocks JOIN confiseries ON stocks.confiserie_id = confiseries.id WHERE stocks.boutique_id = $shop_id";
             $stocks = query($request_stocks);
           
@@ -94,7 +116,7 @@ else {}
                     </form>"
                 );
             }
-        }
+        // }
 
         ?>
     </div>

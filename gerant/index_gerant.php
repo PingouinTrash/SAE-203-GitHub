@@ -25,7 +25,7 @@ if($_SESSION["role"] != "gerant"){
 
         foreach($shops as $shop) {
             echo(
-                "<a href='produit_gerant.php'>
+                "<a href='produit_gerant.php?boutique_id=" . $shop["boutique_id"] . "'>
                     <div class='card hover horizontal'>
                         <img class='image' src='../media/Boutique.jpg' alt='Boutique de " . $shop["nom"] . "'>
                         <div class='desc'>

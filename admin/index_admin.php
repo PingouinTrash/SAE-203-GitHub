@@ -12,6 +12,47 @@ if ($_SESSION["role"] != "admin") {
 
 <section>
     <div class="nom-de-page">
+        <h2>Gestion de la liste principale des confiseries</h2>
+    </div>
+</section>
+
+<!-- `id`, `nom`, `type`, `prix`, `illustration`, `description` -->
+
+<section class="liste">
+    <form method="post">
+        <label for="nom_confiserie">Nom de la confiserie :</label>
+        <input type="text" name="nom_confiserie" placeholder="" required><br>
+
+        <label for="type_confiserie">Type :</label>
+        <select name="type_confiserie">
+            <option value="">--Sélectionnez un type de confiserie--</option>
+            <?php
+
+            $request_types = "SELECT type FROM confiseries";
+            $types = query($request_types);
+
+            foreach($types as $type) {
+                $type = $type[0];
+                echo("<option value='$type'>$type</option>");
+            }
+
+            ?>
+        </select>
+        <br>
+
+        <label for="prix">Prix unitaire :</label>
+        <input type="number" name="prix" placeholder="" required><br>
+
+        <label for="description">Description :</label>
+        <input type="text" name="description" placeholder="" required><br>
+
+        <input type="hidden" name="actiontype_confiserie" value="ajout_confiserie">
+        <button type="submit" class="bouton fond-clair"><h4>Ajouter une confiserie</h4></button>
+    </form>
+</section>
+
+<section>
+    <div class="nom-de-page">
         <h2>Gestion des boutiques</h2>
     </div>
 </section>
@@ -39,8 +80,8 @@ if ($_SESSION["role"] != "admin") {
         <label for="pays">Pays :</label>
         <input type="text" id="pays" name="pays" placeholder="Pays ..." required><br>
 
-        <input type="hidden" name="actiontype" value="ajout_boutique">
-        <button type="submit" class="bouton fond-clair"><h4>Créer une boutique</h4></button>
+        <input type="hidden" name="actiontype_boutique" value="ajout_boutique">
+        <button type="submit" class="bouton fond-clair"><h4>Ajouter une boutique</h4></button>
     </form>
 </section>
   
@@ -48,9 +89,9 @@ if ($_SESSION["role"] != "admin") {
     <div>
         <?php
 
-        if (isset($_POST["actiontype"])) {
+        if (isset($_POST["actiontype_boutique"])) {
 
-            if($_POST["actiontype"] == "ajout_boutique"){
+            if($_POST["actiontype_boutique"] == "ajout_boutique"){
                 $nomBoutique = $_POST['nom-boutique'];
                 $gerant = $_POST['gerant'];
                 $numRue = $_POST['num-rue'];
@@ -59,7 +100,7 @@ if ($_SESSION["role"] != "admin") {
                 $ville = $_POST['ville'];
                 $pays = $_POST['pays'];
 
-                $stmt = $bdd->prepare("INSERT INTO boutiques (id, nom, utilisateur_id, numero_rue, nom_adresse, code_postal, ville, pays) VALUES (NULL, :nom, :utilisateur_id, :numero_rue, :nom_adresse, :code_postal, :ville, :pays)");
+                $stmt = $bdd->prepare("INSERT INTO boutiques (boutique_id, nom, utilisateur_id, numero_rue, nom_adresse, code_postal, ville, pays) VALUES (NULL, :nom, :utilisateur_id, :numero_rue, :nom_adresse, :code_postal, :ville, :pays)");
                 $stmt->execute([
                     "nom" => $nomBoutique,
                     "utilisateur_id" => $gerant,
@@ -69,19 +110,11 @@ if ($_SESSION["role"] != "admin") {
                     "ville" => $ville,
                     "pays" => $pays
                 ]);
-
-                header("Location: index_admin.php");
-                exit();
             }
 
-            elseif($_POST["actiontype"] == "suppression_boutique"){
+            elseif($_POST["actiontype_boutique"] == "suppression_boutique"){
                 $boutique_id = $_POST['boutique_id'];
-
-                print_r('<pre>');
-                print_r($boutique_id);
-                print_r('</pre>');
-
-                $request_boutique = "DELETE FROM boutiques WHERE id = $boutique_id";
+                $request_boutique = "DELETE FROM boutiques WHERE boutique_id = $boutique_id";
                 $suppr_boutique = query($request_boutique);
 
                 header("Location: index_admin.php");
@@ -103,7 +136,7 @@ if ($_SESSION["role"] != "admin") {
                             </div>
                             <form method='post'>
                                 <input type='hidden' name='actiontype' value='suppression_boutique'>
-                                <input type='hidden' name='boutique_id' value=" . $row["id"] . ">
+                                <input type='hidden' name='boutique_id' value=" . $row["boutique_id"] . ">
                                 <button type='submit' class='bouton fond-sombre'><h4>Supprimer la boutique</h4></button>
                             </form>
                         </div>

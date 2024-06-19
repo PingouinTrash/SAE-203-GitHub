@@ -1,0 +1,16 @@
+---- ATTENTION ----
+
+Par manque de temps et de coordination, le style CSS de certains éléments est manquant, et certaines fonctionnalités ne marchent pas ou ont été cassées et n'ont pu être réparées à temps. 
+
+Fonctionnalités défectueuses  : 
+- l'ajout de confiseries ne marche pas
+- la suppression de boutiques ne marche plus (elle a été cassée)
+- l'ajout de confiseries à un stock fera des doublons si on recharge la page, et il faut recharger la page pour que les confiseries déjà existantes d'un stock n'apparaissent plus dans la liste dépliante de création de stocks
+
+Les colonnes "id" et "nom" ont été renommées dans les tables "utilisateurs" et "boutiques". Ces changements ont été effectués afin de gagner du temps dans l'écriture du code.
+
+Pour changer le nom de la colonne "nom" dans "utilisateurs" : 
+ALTER TABLE utilisateurs RENAME COLUMN nom TO nom_famille;
+
+Pour changer le nom de la colonne "id" dans "boutiques" : 
+ALTER TABLE boutiques RENAME COLUMN id TO boutique_id;
